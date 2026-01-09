@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_page.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\test_page.dir/objects.a @CMakeFiles\test_page.dir\objects1.rsp
+C:\MinGw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\test_page.dir/objects.a -Wl,--no-whole-archive -o test_page.exe -Wl,--out-implib,libtest_page.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_page.dir\linkLibs.rsp

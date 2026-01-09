@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libogdb_lib.a CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.obj CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj
+C:\MinGW\bin\ranlib.exe libogdb_lib.a

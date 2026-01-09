@@ -1,0 +1,17 @@
+{
+  "tests": 1,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PageTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "ConstructorTest",
+          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "line": 18
+        }
+      ]
+    }
+  ]
+}
