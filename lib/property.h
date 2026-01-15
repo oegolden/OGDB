@@ -2,38 +2,31 @@
 #define PROPERTY_H
 
 #include <string>
-#include <array>
-template <typename T>
-class Property{
+#include <cstdint>
+#include <stdexcept>
+
+class Property {
+    enum class PropertyType {string, integer};
 public:
-    virtual T getValue() const = 0;
-    virtual std::string getName() const;
-    virtual void setValue() = 0;
-    virtual long getNextPropId() const;
-    virtual void setNextPropId();
+    static constexpr std::size_t NAMELENGTH = 64;
+
+    Property(const std::string& name, uint16_t prevPropId, PropertyType propType);
+    ~Property() = default;
+
+    const std::string& getName() const;
+    void setName(const std::string& name);
+
+    int32_t getNextPropId() const;
+    void setNextPropId(int32_t id);
+
+    uint16_t getPrevPropId() const;
+    void setPrevPropId(uint16_t id);
+
 private:
     std::string name;
-    long nextPropId;
-    long prevPropId;
-
+    int32_t nextPropId; // -1 indicates no next property
+    uint16_t prevPropId;
+    PropertyType propType;
 };
 
-class IntProperty : Property<int>{
-    public:
-        /// @brief  sets the integer value of the property, no overflow needed
-        void setValue() override;
-        /// @brief gets the value of the int property namely the integer value
-        /// @return returns the integer
-        int getValue() const override;
-};
-
-class stringProperty : Property<std::string>{
-    public:
-        /// @brief sets the string value of the string property, allocates to overflow if needed
-        void setValue() override;
-        /// @brief gets the string value 
-        /// @return returns the string, either retrieved from 
-        std::string getValue() const override;
-};
-
-#endif
+#endif // PROPERTY_H

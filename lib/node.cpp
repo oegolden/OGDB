@@ -4,18 +4,18 @@
 #include <cstring>
 #include <span>
 #include <vector>
+#include <iostream>
 
-
-constexpr size_t LABELSIZE = 16;
+constexpr size_t LABELSIZE = 64;
 
 Node::Node(std::string newlabel) : inUse(true), firstRelationshipId(0), firstpropertyId(0)
 {
 	setLabel(newlabel);
 }
 
-Node::Node(std::vector<uint8_t> chunk){
+Node::Node(std::vector<std::byte> chunk){
 	// Deserialize inUse flag (byte 0)
-	inUse = (chunk[0] != 0);
+	inUse = static_cast<bool>(chunk[0]);
 	
 	// Deserialize firstRelationshipId (bytes 1-4, big-endian)
 	firstRelationshipId = (static_cast<uint32_t>(chunk[1]) << 24) |
@@ -56,7 +56,7 @@ void Node::setLabel(std::string newLabel)
 {
 	if (newLabel.size() > LABELSIZE || newLabel.size() < 1)
 	{
-		throw std::length_error("label must have size greater than 0 characters but less than 16");
+		throw std::length_error("label must have size greater than 0 characters but less than " + std::to_string(LABELSIZE));
 	}
 	else
 	{

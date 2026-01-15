@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/OGgol/Desktop/OGDB/lib/bufferPool.cpp" "CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj" "gcc" "CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj.d"
+  "C:/Users/OGgol/Desktop/OGDB/lib/globalStringStorage.cpp" "CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj" "gcc" "CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj.d"
   "C:/Users/OGgol/Desktop/OGDB/lib/node.cpp" "CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj" "gcc" "CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj.d"
   "C:/Users/OGgol/Desktop/OGDB/lib/property.cpp" "CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj" "gcc" "CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj.d"
   "C:/Users/OGgol/Desktop/OGDB/lib/relationship.cpp" "CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.obj" "gcc" "CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.obj.d"

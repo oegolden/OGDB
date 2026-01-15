@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = C:\Users\OGgol\Desktop\OGDB\build
 all: CMakeFiles/ogdb_lib.dir/all
 all: CMakeFiles/test_node.dir/all
 all: CMakeFiles/test_page.dir/all
+all: CMakeFiles/test_GSS.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
@@ -72,6 +73,7 @@ all: _deps/googletest-build/all
 codegen: CMakeFiles/ogdb_lib.dir/codegen
 codegen: CMakeFiles/test_node.dir/codegen
 codegen: CMakeFiles/test_page.dir/codegen
+codegen: CMakeFiles/test_GSS.dir/codegen
 codegen: _deps/googletest-build/codegen
 .PHONY : codegen
 
@@ -83,6 +85,7 @@ preinstall: _deps/googletest-build/preinstall
 clean: CMakeFiles/ogdb_lib.dir/clean
 clean: CMakeFiles/test_node.dir/clean
 clean: CMakeFiles/test_page.dir/clean
+clean: CMakeFiles/test_GSS.dir/clean
 clean: CMakeFiles/run_tests.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
@@ -160,12 +163,12 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 CMakeFiles/ogdb_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=9,10,11,12,13 "Built target ogdb_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=9,10,11,12,13,14 "Built target ogdb_lib"
 .PHONY : CMakeFiles/ogdb_lib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ogdb_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ogdb_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 0
 .PHONY : CMakeFiles/ogdb_lib.dir/rule
@@ -177,7 +180,7 @@ ogdb_lib: CMakeFiles/ogdb_lib.dir/rule
 # codegen rule for target.
 CMakeFiles/ogdb_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=9,10,11,12,13 "Finished codegen for target ogdb_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=9,10,11,12,13,14 "Finished codegen for target ogdb_lib"
 .PHONY : CMakeFiles/ogdb_lib.dir/codegen
 
 # clean rule for target.
@@ -190,16 +193,16 @@ CMakeFiles/ogdb_lib.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/test_node.dir/all: CMakeFiles/ogdb_lib.dir/all
-CMakeFiles/test_node.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_node.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/test_node.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_node.dir\build.make CMakeFiles/test_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_node.dir\build.make CMakeFiles/test_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=15,16 "Built target test_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=18,19 "Built target test_node"
 .PHONY : CMakeFiles/test_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 0
 .PHONY : CMakeFiles/test_node.dir/rule
@@ -211,7 +214,7 @@ test_node: CMakeFiles/test_node.dir/rule
 # codegen rule for target.
 CMakeFiles/test_node.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_node.dir\build.make CMakeFiles/test_node.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=15,16 "Finished codegen for target test_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=18,19 "Finished codegen for target test_node"
 .PHONY : CMakeFiles/test_node.dir/codegen
 
 # clean rule for target.
@@ -224,16 +227,16 @@ CMakeFiles/test_node.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/test_page.dir/all: CMakeFiles/ogdb_lib.dir/all
-CMakeFiles/test_page.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test_page.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/test_page.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_page.dir\build.make CMakeFiles/test_page.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_page.dir\build.make CMakeFiles/test_page.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=17,18 "Built target test_page"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=20,21 "Built target test_page"
 .PHONY : CMakeFiles/test_page.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_page.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_page.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 0
 .PHONY : CMakeFiles/test_page.dir/rule
@@ -245,7 +248,7 @@ test_page: CMakeFiles/test_page.dir/rule
 # codegen rule for target.
 CMakeFiles/test_page.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_page.dir\build.make CMakeFiles/test_page.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=17,18 "Finished codegen for target test_page"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=20,21 "Finished codegen for target test_page"
 .PHONY : CMakeFiles/test_page.dir/codegen
 
 # clean rule for target.
@@ -254,19 +257,54 @@ CMakeFiles/test_page.dir/clean:
 .PHONY : CMakeFiles/test_page.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_GSS.dir
+
+# All Build rule for target.
+CMakeFiles/test_GSS.dir/all: CMakeFiles/ogdb_lib.dir/all
+CMakeFiles/test_GSS.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/test_GSS.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=16,17 "Built target test_GSS"
+.PHONY : CMakeFiles/test_GSS.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_GSS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_GSS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 0
+.PHONY : CMakeFiles/test_GSS.dir/rule
+
+# Convenience name for target.
+test_GSS: CMakeFiles/test_GSS.dir/rule
+.PHONY : test_GSS
+
+# codegen rule for target.
+CMakeFiles/test_GSS.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=16,17 "Finished codegen for target test_GSS"
+.PHONY : CMakeFiles/test_GSS.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_GSS.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/clean
+.PHONY : CMakeFiles/test_GSS.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
 CMakeFiles/run_tests.dir/all: CMakeFiles/test_node.dir/all
 CMakeFiles/run_tests.dir/all: CMakeFiles/test_page.dir/all
+CMakeFiles/run_tests.dir/all: CMakeFiles/test_GSS.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=14 "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=15 "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -278,8 +316,9 @@ run_tests: CMakeFiles/run_tests.dir/rule
 # codegen rule for target.
 CMakeFiles/run_tests.dir/codegen: CMakeFiles/test_node.dir/all
 CMakeFiles/run_tests.dir/codegen: CMakeFiles/test_page.dir/all
+CMakeFiles/run_tests.dir/codegen: CMakeFiles/test_GSS.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_tests.dir\build.make CMakeFiles/run_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=14 "Finished codegen for target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=15 "Finished codegen for target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/codegen
 
 # clean rule for target.

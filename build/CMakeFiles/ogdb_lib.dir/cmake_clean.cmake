@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj"
   "CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj.d"
+  "CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj"
+  "CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj.d"
   "CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj"
   "CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj.d"
   "CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj"

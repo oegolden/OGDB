@@ -28,6 +28,7 @@ set(LIB_SOURCES
     lib/property.cpp
     lib/relationship.cpp
     lib/bufferPool.cpp
+    lib/globalStringStorage.cpp
 )
 
 # Add library headers
@@ -37,6 +38,7 @@ set(LIB_HEADERS
     lib/relationship.h
     lib/page.h
     lib/bufferPool.h
+    lib/globalStringStorage.h
 )
 
 # Create a library from the source files
@@ -46,7 +48,7 @@ add_library(ogdb_lib ${LIB_SOURCES} ${LIB_HEADERS})
 target_include_directories(ogdb_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 # Add test executables
-set(TEST_TARGETS test_node test_page)
+set(TEST_TARGETS test_node test_page test_GSS)
 foreach(TEST_TARGET ${TEST_TARGETS})
     add_executable(${TEST_TARGET} tests/${TEST_TARGET}.cpp)
     target_link_libraries(${TEST_TARGET}
@@ -65,7 +67,8 @@ endforeach()
 add_custom_target(run_tests
     COMMAND test_node
     COMMAND test_page
-    DEPENDS test_node test_page
+    command test_GSS
+    DEPENDS test_node test_page test_GSS
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     COMMENT "Running tests..."
 )

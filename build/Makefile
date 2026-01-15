@@ -210,6 +210,19 @@ test_page/fast:
 .PHONY : test_page/fast
 
 #=============================================================================
+# Target rules for targets named test_GSS
+
+# Build rule for target.
+test_GSS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_GSS
+.PHONY : test_GSS
+
+# fast build rule for target.
+test_GSS/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/build
+.PHONY : test_GSS/fast
+
+#=============================================================================
 # Target rules for targets named run_tests
 
 # Build rule for target.
@@ -298,6 +311,30 @@ lib/bufferPool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.s
 .PHONY : lib/bufferPool.cpp.s
 
+lib/globalStringStorage.obj: lib/globalStringStorage.cpp.obj
+.PHONY : lib/globalStringStorage.obj
+
+# target to build an object file
+lib/globalStringStorage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj
+.PHONY : lib/globalStringStorage.cpp.obj
+
+lib/globalStringStorage.i: lib/globalStringStorage.cpp.i
+.PHONY : lib/globalStringStorage.i
+
+# target to preprocess a source file
+lib/globalStringStorage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.i
+.PHONY : lib/globalStringStorage.cpp.i
+
+lib/globalStringStorage.s: lib/globalStringStorage.cpp.s
+.PHONY : lib/globalStringStorage.s
+
+# target to generate assembly for a file
+lib/globalStringStorage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.s
+.PHONY : lib/globalStringStorage.cpp.s
+
 lib/node.obj: lib/node.cpp.obj
 .PHONY : lib/node.obj
 
@@ -370,6 +407,30 @@ lib/relationship.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ogdb_lib.dir\build.make CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.s
 .PHONY : lib/relationship.cpp.s
 
+tests/test_GSS.obj: tests/test_GSS.cpp.obj
+.PHONY : tests/test_GSS.obj
+
+# target to build an object file
+tests/test_GSS.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/tests/test_GSS.cpp.obj
+.PHONY : tests/test_GSS.cpp.obj
+
+tests/test_GSS.i: tests/test_GSS.cpp.i
+.PHONY : tests/test_GSS.i
+
+# target to preprocess a source file
+tests/test_GSS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/tests/test_GSS.cpp.i
+.PHONY : tests/test_GSS.cpp.i
+
+tests/test_GSS.s: tests/test_GSS.cpp.s
+.PHONY : tests/test_GSS.s
+
+# target to generate assembly for a file
+tests/test_GSS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_GSS.dir\build.make CMakeFiles/test_GSS.dir/tests/test_GSS.cpp.s
+.PHONY : tests/test_GSS.cpp.s
+
 tests/test_node.obj: tests/test_node.cpp.obj
 .PHONY : tests/test_node.obj
 
@@ -437,11 +498,15 @@ help:
 	@echo ... gtest
 	@echo ... gtest_main
 	@echo ... ogdb_lib
+	@echo ... test_GSS
 	@echo ... test_node
 	@echo ... test_page
 	@echo ... lib/bufferPool.obj
 	@echo ... lib/bufferPool.i
 	@echo ... lib/bufferPool.s
+	@echo ... lib/globalStringStorage.obj
+	@echo ... lib/globalStringStorage.i
+	@echo ... lib/globalStringStorage.s
 	@echo ... lib/node.obj
 	@echo ... lib/node.i
 	@echo ... lib/node.s
@@ -451,6 +516,9 @@ help:
 	@echo ... lib/relationship.obj
 	@echo ... lib/relationship.i
 	@echo ... lib/relationship.s
+	@echo ... tests/test_GSS.obj
+	@echo ... tests/test_GSS.i
+	@echo ... tests/test_GSS.s
 	@echo ... tests/test_node.obj
 	@echo ... tests/test_node.i
 	@echo ... tests/test_node.s

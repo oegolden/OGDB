@@ -67,9 +67,10 @@ include CMakeFiles/run_tests.dir/progress.make
 
 CMakeFiles/run_tests: test_node.exe
 CMakeFiles/run_tests: test_page.exe
+CMakeFiles/run_tests: test_GSS.exe
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running tests..."
 	C:\Users\OGgol\Desktop\OGDB\build\test_node.exe
-	C:\Users\OGgol\Desktop\OGDB\build\test_page.exe
+	C:\Users\OGgol\Desktop\OGDB\build\test_page.exe command test_GSS
 
 CMakeFiles/run_tests.dir/codegen:
 .PHONY : CMakeFiles/run_tests.dir/codegen

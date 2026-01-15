@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "../lib/node.h"
 #include <cstring>
+#include <cstddef>
+#include <vector>
 #include <stdexcept>
 using namespace std;
 
@@ -32,8 +34,8 @@ TEST_F(NodeTest, ConstructorWithSingleCharLabel) {
 
 // Test constructor with maximum length label (16 characters)
 TEST_F(NodeTest, ConstructorWithMaxLengthLabel) {
-    Node node("1234567890123456");
-    EXPECT_EQ(node.getLabel(), "1234567890123456");
+    Node node("1234567890123456475027457320857432097503497502484738570239574391");
+    EXPECT_EQ(node.getLabel(), "1234567890123456475027457320857432097503497502484738570239574391");
 }
 
 // Test constructor with empty label (should throw)
@@ -46,7 +48,7 @@ TEST_F(NodeTest, ConstructorWithEmptyLabelThrows) {
 // Test constructor with too long label (should throw)
 TEST_F(NodeTest, ConstructorWithTooLongLabelThrows) {
     EXPECT_THROW({
-        Node node("12345678901234567"); // 17 characters
+        Node node("12345678901234564750274573208574320975034975024847385702395743912"); // 65 characters
     }, std::length_error);
 }
 
@@ -148,7 +150,7 @@ TEST_F(NodeTest, SetLabelEmptyThrows) {
 TEST_F(NodeTest, SetLabelTooLongThrows) {
     Node node("Initial");
     EXPECT_THROW({
-        node.setLabel("12345678901234567"); // 17 characters
+        node.setLabel("12345678901234567123456789012345671234567890123456712345678901234567"); 
     }, std::length_error);
 }
 
@@ -175,7 +177,7 @@ TEST_F(NodeTest, SerializeObjectBasic) {
     auto serialized = node.serializeObject();
     
     // Check size
-    EXPECT_EQ(serialized.size(), 16 + 8 + 2);
+    EXPECT_EQ(serialized.size(), 64 + 8 + 2);
     
     // Check inUse flag (should be 1 by default)
     EXPECT_EQ(serialized[0], static_cast<std::byte>(1));
@@ -282,22 +284,22 @@ TEST_F(NodeTest, SerializeObjectWithMaxIDs) {
 // Test constructor from byte chunk
 TEST_F(NodeTest, ConstructorFromByteChunk) {
     // Create a byte chunk with known values
-    std::vector<uint8_t> chunk(26, 0);
+    std::vector<std::byte> chunk(26, static_cast<std::byte>(0));
     
     // Set inUse flag (byte 0)
-    chunk[0] = 1;
+    chunk[0] = static_cast<std::byte>(1);
     
     // Set firstRelationshipId = 0x12345678 (bytes 1-4, big-endian)
-    chunk[1] = 0x12;
-    chunk[2] = 0x34;
-    chunk[3] = 0x56;
-    chunk[4] = 0x78;
+    chunk[1] = static_cast<std::byte>(0x12);
+    chunk[2] = static_cast<std::byte>(0x34);
+    chunk[3] = static_cast<std::byte>(0x56);
+    chunk[4] = static_cast<std::byte>(0x78);
     
     // Set firstpropertyId = 0xABCDEF01 (bytes 5-8, big-endian)
-    chunk[5] = 0xAB;
-    chunk[6] = 0xCD;
-    chunk[7] = 0xEF;
-    chunk[8] = 0x01;
+    chunk[5] = static_cast<std::byte>(0xAB);
+    chunk[6] = static_cast<std::byte>(0xCD);
+    chunk[7] = static_cast<std::byte>(0xEF);
+    chunk[8] = static_cast<std::byte>(0x01);
     
     // Set label "TestNode" (bytes 9+)
     std::string testLabel = "TestNode";
@@ -323,13 +325,9 @@ TEST_F(NodeTest, SerializeDeserializeRoundTrip) {
     // Serialize
     auto serialized = original.serializeObject();
     
-    // Convert std::byte array to uint8_t vector
-    std::vector<uint8_t> chunk(serialized.size());
-    for (size_t i = 0; i < serialized.size(); ++i) {
-        chunk[i] = static_cast<uint8_t>(serialized[i]);
-    }
-    
-    // Deserialize into new node
+    // Convert std::array<std::byte,...> to std::vector<std::byte> and deserialize
+    std::vector<std::byte> chunk(serialized.size());
+    for (size_t i = 0; i < serialized.size(); ++i) chunk[i] = serialized[i];
     Node deserialized(chunk);
     
     // Verify all fields match
@@ -340,9 +338,9 @@ TEST_F(NodeTest, SerializeDeserializeRoundTrip) {
 
 // Test constructor from byte chunk with null-terminated label
 TEST_F(NodeTest, ConstructorFromByteChunkWithNullTerminator) {
-    std::vector<uint8_t> chunk(26, 0);
-    
-    chunk[0] = 1; // inUse
+    std::vector<std::byte> chunk(26, static_cast<std::byte>(0));
+
+    chunk[0] = static_cast<std::byte>(1); // inUse
     
     // Set label "Short" followed by null terminator
     std::string testLabel = "Short";

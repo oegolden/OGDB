@@ -131,12 +131,28 @@ CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.s"
 	C:\MinGw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\OGgol\Desktop\OGDB\lib\bufferPool.cpp -o CMakeFiles\ogdb_lib.dir\lib\bufferPool.cpp.s
 
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj: CMakeFiles/ogdb_lib.dir/flags.make
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj: CMakeFiles/ogdb_lib.dir/includes_CXX.rsp
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj: C:/Users/OGgol/Desktop/OGDB/lib/globalStringStorage.cpp
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj: CMakeFiles/ogdb_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj"
+	C:\MinGw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj -MF CMakeFiles\ogdb_lib.dir\lib\globalStringStorage.cpp.obj.d -o CMakeFiles\ogdb_lib.dir\lib\globalStringStorage.cpp.obj -c C:\Users\OGgol\Desktop\OGDB\lib\globalStringStorage.cpp
+
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.i"
+	C:\MinGw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\OGgol\Desktop\OGDB\lib\globalStringStorage.cpp > CMakeFiles\ogdb_lib.dir\lib\globalStringStorage.cpp.i
+
+CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.s"
+	C:\MinGw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\OGgol\Desktop\OGDB\lib\globalStringStorage.cpp -o CMakeFiles\ogdb_lib.dir\lib\globalStringStorage.cpp.s
+
 # Object files for target ogdb_lib
 ogdb_lib_OBJECTS = \
 "CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj" \
 "CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj" \
 "CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.obj" \
-"CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj"
+"CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj" \
+"CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj"
 
 # External object files for target ogdb_lib
 ogdb_lib_EXTERNAL_OBJECTS =
@@ -145,9 +161,10 @@ libogdb_lib.a: CMakeFiles/ogdb_lib.dir/lib/node.cpp.obj
 libogdb_lib.a: CMakeFiles/ogdb_lib.dir/lib/property.cpp.obj
 libogdb_lib.a: CMakeFiles/ogdb_lib.dir/lib/relationship.cpp.obj
 libogdb_lib.a: CMakeFiles/ogdb_lib.dir/lib/bufferPool.cpp.obj
+libogdb_lib.a: CMakeFiles/ogdb_lib.dir/lib/globalStringStorage.cpp.obj
 libogdb_lib.a: CMakeFiles/ogdb_lib.dir/build.make
 libogdb_lib.a: CMakeFiles/ogdb_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libogdb_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\OGgol\Desktop\OGDB\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libogdb_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\ogdb_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ogdb_lib.dir\link.txt --verbose=$(VERBOSE)
 

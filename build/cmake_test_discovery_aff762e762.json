@@ -1,0 +1,32 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "GloabalStringStorageTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "ConstructorTest",
+          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_GSS.cpp",
+          "line": 24
+        },
+        {
+          "name": "InsertStringIntoEmptyFileTest",
+          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_GSS.cpp",
+          "line": 34
+        },
+        {
+          "name": "StringsPastFilledChunk",
+          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_GSS.cpp",
+          "line": 43
+        },
+        {
+          "name": "DeleteTest",
+          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_GSS.cpp",
+          "line": 58
+        }
+      ]
+    }
+  ]
+}

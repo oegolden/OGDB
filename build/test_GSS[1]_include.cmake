@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/OGgol/Desktop/OGDB/build/test_GSS[1]_tests.cmake")
+  include("C:/Users/OGgol/Desktop/OGDB/build/test_GSS[1]_tests.cmake")
+else()
+  add_test(test_GSS_NOT_BUILT test_GSS_NOT_BUILT)
+endif()

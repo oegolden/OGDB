@@ -8,14 +8,18 @@
 #include "property.h"
 #include <cstring>
 #include <vector>
+#include <cstdint>
+#include <array>
 class Node
 {
-    static constexpr inline int LABELSIZE = 16;
-
+    static constexpr inline int LABELSIZE = 64;
 public:
+    static constexpr std::size_t SERIALIZED_SIZE = LABELSIZE + 8 + 2;
     Node(std::string newlabel);
     /// @brief gets the label for the ndoe
     /// @return returns the label of size LABELSIZE
+    Node(std::vector<std::byte> chunk);
+    // Accept byte vectors of type uint8_t (used by tests)
     Node(std::vector<uint8_t> chunk);
     std::string getLabel() { return label; }
     /// @brief gets the global offset of the first relationship id
@@ -29,6 +33,7 @@ public:
     void setUseState(bool inUseState);
     /// @brief set's the global offset of the first relationship id
     /// @param
+    bool getUseState() const {return inUse; }
     void setFirstRelationship(uint32_t relId);
     /// @brief sets the global offset of the first property id
     void setFirstProperty(uint32_t propId);
@@ -46,14 +51,14 @@ public:
      * @return std::array<std::byte, (LABELSIZE + sizeof(uint32_t) + sizeof(uint32_t))>
      *         A byte array containing the serialized representation of the object.
      */
-
-    Node unserializeObject(std::vector<uint8_t> chunk) const;
     std::array<std::byte, (LABELSIZE + 8 + 2)> serializeObject() const;
 
 private:
     bool inUse;
     std::string label;
+    void deserialize(const std::vector<std::byte>& chunk);
     // consider using a union when i want to pointer swivel
+    // these are GLOBAL IDs consider when implementing buffer manager
     uint32_t firstRelationshipId;
     uint32_t firstpropertyId;
 };

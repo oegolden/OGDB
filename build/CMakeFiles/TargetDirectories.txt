@@ -1,6 +1,7 @@
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/ogdb_lib.dir
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/test_node.dir
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/test_page.dir
+C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/test_GSS.dir
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/run_tests.dir
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/test.dir
 C:/Users/OGgol/Desktop/OGDB/build/CMakeFiles/edit_cache.dir
