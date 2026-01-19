@@ -8,27 +8,27 @@
       "testsuite": [
         {
           "name": "ConstructorTest",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
           "line": 19
         },
         {
           "name": "insertGetTestEmptyPage",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
           "line": 26
         },
         {
           "name": "insertGetTestPartlyFullPage",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
           "line": 35
         },
         {
           "name": "insertGetTestFullPage",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
           "line": 45
         },
         {
           "name": "deleteNodeTest",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_page.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
           "line": 56
         }
       ]

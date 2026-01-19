@@ -55,6 +55,6 @@ TEST_F(GloabalStringStorageTest,StringsPastFilledChunk){
     }
 }
 
-TEST_F(GloabalStringStorageTest,DeleteTest){
+TEST_F(GloabalStringStorageTest,ExistingFileTest){
 
 }

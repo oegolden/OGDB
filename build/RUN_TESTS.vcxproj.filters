@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\OGgol\OGDB\OGDB\build\CMakeFiles\2d699a95ee280245d3e17ec683118add\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{69E728B7-6E2A-3984-BF58-956ADDA0989E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -8,157 +8,157 @@
       "testsuite": [
         {
           "name": "ConstructorWithValidLabel",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 22
         },
         {
           "name": "ConstructorWithSingleCharLabel",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 30
         },
         {
           "name": "ConstructorWithMaxLengthLabel",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 36
         },
         {
           "name": "ConstructorWithEmptyLabelThrows",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 42
         },
         {
           "name": "ConstructorWithTooLongLabelThrows",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 49
         },
         {
           "name": "GetLabel",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 56
         },
         {
           "name": "GetFirstRelationshipIDInitial",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 63
         },
         {
           "name": "GetFirstPropertyIDInitial",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 69
         },
         {
           "name": "SetFirstRelationship",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 75
         },
         {
           "name": "SetFirstRelationshipZero",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 82
         },
         {
           "name": "SetFirstRelationshipMaxValue",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 90
         },
         {
           "name": "SetFirstProperty",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 98
         },
         {
           "name": "SetFirstPropertyZero",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 105
         },
         {
           "name": "SetFirstPropertyMaxValue",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 113
         },
         {
           "name": "SetLabelValid",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 121
         },
         {
           "name": "SetLabelSingleChar",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 128
         },
         {
           "name": "SetLabelMaxLength",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 135
         },
         {
           "name": "SetLabelEmptyThrows",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 142
         },
         {
           "name": "SetLabelTooLongThrows",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 150
         },
         {
           "name": "SetUseStateTrue",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 158
         },
         {
           "name": "SetUseStateFalse",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 167
         },
         {
           "name": "SerializeObjectBasic",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 175
         },
         {
           "name": "SerializeObjectWithIDs",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 187
         },
         {
           "name": "SerializeObjectWithLabel",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 211
         },
         {
           "name": "SerializeObjectNotInUse",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 225
         },
         {
           "name": "MultipleOperationsSequence",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 236
         },
         {
           "name": "SerializeObjectWithZeroIDs",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 259
         },
         {
           "name": "SerializeObjectWithMaxIDs",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 271
         },
         {
           "name": "ConstructorFromByteChunk",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 285
         },
         {
           "name": "SerializeDeserializeRoundTrip",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 318
         },
         {
           "name": "ConstructorFromByteChunkWithNullTerminator",
-          "file": "C:\\Users\\OGgol\\Desktop\\OGDB\\tests\\test_node.cpp",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_node.cpp",
           "line": 340
         }
       ]

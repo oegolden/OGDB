@@ -31,8 +31,8 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         //should have hit eof marker so we need to clear
         GSS.clear();
         GSS.seekg(offset, std::ios::beg);
-        char headerChars[size];
-        GSS.read(headerChars,size);
+        std::vector<char> headerChars(size);
+        GSS.read(headerChars.data(),size);
         //turn headerChars into unordered map
         //first 4 bytes is offset
         //next 4 bytes is length
@@ -48,6 +48,8 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
             GlobalStringStorage::stringEntry header = {offset,length};
             headerStore[i/8] = header;
         }
+        //erase last 16 bits
+        std::filesystem::resize_file(f,std::filesystem::file_size(f) - 16);
     } else{
         std::ofstream GSS(f);
     }
@@ -55,7 +57,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
 
 GlobalStringStorage::~GlobalStringStorage()
 {
-    // currently no dynamic resources require explicit cleanup.
+    saveToDisk();
 }
 
 void GlobalStringStorage::readInChunk(int headerSlot)
@@ -78,9 +80,9 @@ void GlobalStringStorage::readInChunk(int headerSlot)
     GSS.seekg(initialOffset);
     //erase current str_store
     str_store.clear();
-    char temp[numBytes];
-    GSS.read(temp,readBytes);
-    str_store.insert(str_store.end(),temp,temp + numBytes);
+    std::vector<char> temp(numBytes);
+    GSS.read(temp.data(),readBytes);
+    str_store.insert(str_store.end(),temp.begin(),temp.end());
     chunkStart = headerSlot;
     GSS.close();
 }
@@ -141,4 +143,16 @@ int GlobalStringStorage::deleteString(int headerSlot){
     newlyOpenSlots.insert(headerStore[headerSlot]);
     headerStore.erase(headerSlot);
     return headerSlot;
+}
+
+void saveToDisk(){
+    //save header to disk
+    std::ofstream GSS;
+    GSS.open("../files/gss.bin", std::ios::ate | std::ios::binary | std::ios::in | std::ios::out);
+    for(auto header: headerStore){
+        
+    }
+    //write header to file
+    //write down header info: first 4 bytes is offset, second 4 is length 
+
 }

@@ -25,6 +25,7 @@ public:
     std::string getString(int headerSlot);
     int putString(std::string string);
     int deleteString(int headerSlot);
+    void saveToDisk();
 private:
     struct stringEntry{
         uint32_t offset; // Where it starts
