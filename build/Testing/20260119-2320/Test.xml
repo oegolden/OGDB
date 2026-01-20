@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Site BuildName="(empty)"
+<Site BuildName="Win32-MSBuild"
 	BuildStamp="20260119-2320-Experimental"
-	Name="(empty)"
+	Name="DESKTOP-M7SFJOK"
 	Generator="ctest-4.2.1"
-	CompilerName=""
-	CompilerVersion=""
+	CompilerName="C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe"
+	CompilerVersion="19.50.35722.0"
 	OSName="Windows"
 	Hostname="DESKTOP-M7SFJOK"
 	OSRelease="10.0.22631"
@@ -25,11 +25,45 @@
 	ProcessorClockFrequency="3504"
 	>
 	<Testing>
-		<StartDateTime>Jan 19 19:30 Pacific Standard Time</StartDateTime>
-		<StartTestTime>1768879810</StartTestTime>
-		<TestList/>
-		<EndDateTime>Jan 19 19:30 Pacific Standard Time</EndDateTime>
-		<EndTestTime>1768879812</EndTestTime>
+		<StartDateTime>Jan 19 21:35 Pacific Standard Time</StartDateTime>
+		<StartTestTime>1768887306</StartTestTime>
+		<TestList>
+			<Test>./GloabalStringStorageTest.ExistingFileTest</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>GloabalStringStorageTest.ExistingFileTest</Name>
+			<Path>.</Path>
+			<FullName>./GloabalStringStorageTest.ExistingFileTest</FullName>
+			<FullCommandLine>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_GSS.exe "--gtest_filter=GloabalStringStorageTest.ExistingFileTest" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0241732</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_GSS.exe "--gtest_filter=GloabalStringStorageTest.ExistingFileTest" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJydUd9rwkAMfr+/Io8KqyhjQwp7cLO6wXDD6pMV6Y9Yj13v5C617r/fXVvECcJcHo4k9yX5vmReSsllDkXMZacLW60KePGjpUFtoo9proR9x8/Nk5RcZNEmw72JcqVygYSGPKPTszCqQ+dtXNNemrKZIvRhWkNgYX9gywWhhieYChUnsQhJWxYhKR3n6BC94MgN2dyEizrBVk8nW8O8pT0Aqts52q1vSk7YYyvvZGs3xQ5p/lEeuFayQGmxSF65vwCf97xGj61gvpxBbesbRFjdCJXmRCiHzKUhjA+YDR9L+SVVJd1m7K5Qa6V9CINXwGOKe+JKQsVpB6nKEPrHtF/bA9BOuzIurYcN80Rl31YTwGT09h6Mb2IIncE9FKZ7+0raSiBFseiyvx2AMNZeZgX8Pu+1s4KOZe9ikNX5OQrDRme/BpsL9U2LOxBWK2aQoFCV/88FMWbbtXWLIFywH9bWFTs=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 19 21:35 Pacific Standard Time</EndDateTime>
+		<EndTestTime>1768887306</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

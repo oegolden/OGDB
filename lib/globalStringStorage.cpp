@@ -6,9 +6,9 @@
 #include <span>
 #include <cstdlib>
 
-//TODO: Rethink this whole thing with deletes in mind, how can we fill the holes in the file?
-//keep track of open slots and if the slot has enough size we can put stuff in that
-//create a save function that also does clean up tightens strings together updating header offsets
+//TODO:: tighten strings together updating header offsets
+//TODO:: Make this system crash proof, 
+//currently if something fails mid save, you either lose data or have a corrupted file
 GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
 {
     // TODO: initialize internal buffers and optionally load existing storage
@@ -22,12 +22,28 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         //first 8 bytes after that represent the size we need to read in
         //second 8 bytes are the offset to the start of the header
         GSS.seekg(-16,std::ios::end);
-        char charsOfSize[8];
-        GSS.read(charsOfSize,8);
-        long size = std::atoi(charsOfSize);
-        char charsOfoffset[8];
-        GSS.read(charsOfoffset,8);
-        long offset = std::atoi(charsOfoffset);
+        unsigned char charsOfSize[8]; 
+        GSS.read(reinterpret_cast<char*>(charsOfSize),8);
+        uint64_t size = (static_cast<uint64_t>(charsOfSize[0]) << 56) |
+                        (static_cast<uint64_t>(charsOfSize[1]) << 48) |
+                        (static_cast<uint64_t>(charsOfSize[2]) << 40) |
+                        (static_cast<uint64_t>(charsOfSize[3]) << 32) |
+                        (static_cast<uint64_t>(charsOfSize[4]) << 24) |
+                        (static_cast<uint64_t>(charsOfSize[5]) << 16) |
+                        (static_cast<uint64_t>(charsOfSize[6]) << 8) |
+                        static_cast<uint64_t>(charsOfSize[7]);
+        std::cout << size;
+        unsigned char charsOfoffset[8];
+        GSS.read(reinterpret_cast<char*>(charsOfoffset),8);
+        uint64_t offset = (static_cast<uint64_t>(charsOfoffset[0]) << 56) |
+                          (static_cast<uint64_t>(charsOfoffset[1]) << 48) |
+                          (static_cast<uint64_t>(charsOfoffset[2]) << 40) |
+                          (static_cast<uint64_t>(charsOfoffset[3]) << 32) |
+                          (static_cast<uint64_t>(charsOfoffset[4]) << 24) |
+                          (static_cast<uint64_t>(charsOfoffset[5]) << 16) |
+                          (static_cast<uint64_t>(charsOfoffset[6]) << 8) |
+                          static_cast<uint64_t>(charsOfoffset[7]);
+        std::cout<<offset;
         //should have hit eof marker so we need to clear
         GSS.clear();
         GSS.seekg(offset, std::ios::beg);
@@ -36,7 +52,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         //turn headerChars into unordered map
         //first 4 bytes is offset
         //next 4 bytes is length
-        for(int i = 0; i < size; i+=8){
+        for(long i = 0; i < size; i+=8){
             uint32_t offset = headerChars[i] | 
             (headerChars[i+1] << 8) |
             (headerChars[i+2] << 16) | 
@@ -48,7 +64,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
             GlobalStringStorage::stringEntry header = {offset,length};
             headerStore[i/8] = header;
         }
-        //erase last 16 bits
+        //erase last 16 bytes
         std::filesystem::resize_file(f,std::filesystem::file_size(f) - 16);
     } else{
         std::ofstream GSS(f);
@@ -91,7 +107,7 @@ std::string GlobalStringStorage::getString(int headerSlot)
 {
     //if current chunk contains our string then get it from the chunk
     //else load in the chunk containing that string through CHUNKSIZE
-    if (headerSlot < chunkStart || headerSlot > chunkStart + CHUNKSIZE){
+    if (headerSlot < chunkStart || headerSlot > static_cast<int>(chunkStart + CHUNKSIZE)){
         //load in new chunk of strings
         readInChunk(headerSlot);
     }
@@ -132,7 +148,7 @@ int GlobalStringStorage::putString(std::string s)
     GSS.write(s.data(),s.size());
     //if our current chunk isn't full i.e. last_slot < chunkStart + CHUNKSIZE
     //add to the end of our chunk of strings
-    if (chunkStart + CHUNKSIZE > last_slot+1){
+    if (static_cast<int>(chunkStart + CHUNKSIZE) > last_slot+1){
         str_store.insert(str_store.end(), s.data(), s.data()+s.size());
     }
     GSS.close();
@@ -145,14 +161,53 @@ int GlobalStringStorage::deleteString(int headerSlot){
     return headerSlot;
 }
 
-void saveToDisk(){
+void GlobalStringStorage::saveToDisk(){
     //save header to disk
     std::ofstream GSS;
     GSS.open("../files/gss.bin", std::ios::ate | std::ios::binary | std::ios::in | std::ios::out);
-    for(auto header: headerStore){
-        
+    uint64_t offset = static_cast<uint64_t>(static_cast<std::streamoff>(GSS.tellp()));
+    if (offset == -1){
+        throw std::logic_error("Something went wrong saving!");
     }
-    //write header to file
-    //write down header info: first 4 bytes is offset, second 4 is length 
+    for(auto& entry: headerStore){
+        //cast as byte to ensure masking works the same and that no other opps work
+        std::byte headerByteArray[8];
+        //writing offset to bytes to write to file
+        headerByteArray[0] = static_cast<std::byte>((entry.second.offset >> 24) & 0xFF);
+        headerByteArray[1] = static_cast<std::byte>((entry.second.offset >> 16) & 0xFF);
+        headerByteArray[2] = static_cast<std::byte>((entry.second.offset >> 8) & 0xFF);
+        headerByteArray[3] = static_cast<std::byte>(entry.second.offset & 0xFF);
+        //writing length to bytes to write to file
+        headerByteArray[4] = static_cast<std::byte>((entry.second.length >> 24) & 0xFF);
+        headerByteArray[5] = static_cast<std::byte>((entry.second.length >> 16) & 0xFF);
+        headerByteArray[6] = static_cast<std::byte>((entry.second.length >> 8) & 0xFF);
+        headerByteArray[7] = static_cast<std::byte>(entry.second.length & 0xFF);
+        //write header to file
+        GSS.write(reinterpret_cast<const char*>(headerByteArray),8);
 
+    }
+    //write down header info: first 8 bytes is size, second 8 is offset 
+    uint64_t size = headerStore.size() * 8;
+    std::cout << size << std::endl;
+    std::byte headerInfoBytes[16];
+    //writing size consistently across endian styles
+    headerInfoBytes[0] = static_cast<std::byte>((size >> 56) & 0xFF);
+    headerInfoBytes[1] = static_cast<std::byte>((size >> 48) & 0xFF);
+    headerInfoBytes[2] = static_cast<std::byte>((size >> 40) & 0xFF);
+    headerInfoBytes[3] = static_cast<std::byte>((size >> 32) & 0xFF);
+    headerInfoBytes[4] = static_cast<std::byte>((size >> 24) & 0xFF);
+    headerInfoBytes[5] = static_cast<std::byte>((size >> 16) & 0xFF);
+    headerInfoBytes[6] = static_cast<std::byte>((size >> 8) & 0xFF);
+    headerInfoBytes[7] = static_cast<std::byte>(size & 0xFF);
+    //writing length
+    headerInfoBytes[8] = static_cast<std::byte>((offset >> 56) & 0xFF);
+    headerInfoBytes[9] = static_cast<std::byte>((offset >> 48) & 0xFF);
+    headerInfoBytes[10] = static_cast<std::byte>((offset >> 40) & 0xFF);
+    headerInfoBytes[11] = static_cast<std::byte>((offset >> 32) & 0xFF);
+    headerInfoBytes[12] = static_cast<std::byte>((offset >> 24) & 0xFF);
+    headerInfoBytes[13] = static_cast<std::byte>((offset >> 16) & 0xFF);
+    headerInfoBytes[14] = static_cast<std::byte>((offset >> 8) & 0xFF);
+    headerInfoBytes[15] = static_cast<std::byte>(offset & 0xFF);
+    GSS.write(reinterpret_cast<const char*>(headerInfoBytes),16);
+    GSS.close();
 }

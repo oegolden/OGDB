@@ -20,6 +20,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Enable testing
+include(CTest)
 enable_testing()
 
 # Add library source files

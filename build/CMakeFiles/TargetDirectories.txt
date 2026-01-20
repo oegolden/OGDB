@@ -1,3 +1,7 @@
+C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/Experimental.dir
+C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/Nightly.dir
+C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/Continuous.dir
+C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/NightlyMemoryCheck.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/ogdb_lib.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_node.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_page.dir
