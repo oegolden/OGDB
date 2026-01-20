@@ -1,0 +1,45 @@
+NodeTest.ConstructorWithValidLabel 1 0.0086073
+NodeTest.ConstructorWithSingleCharLabel 1 0.0073783
+NodeTest.ConstructorWithMaxLengthLabel 1 0.0074927
+NodeTest.ConstructorWithEmptyLabelThrows 1 0.0079098
+NodeTest.ConstructorWithTooLongLabelThrows 1 0.0076757
+NodeTest.GetLabel 1 0.0077044
+NodeTest.GetFirstRelationshipIDInitial 1 0.0072449
+NodeTest.GetFirstPropertyIDInitial 1 0.0074572
+NodeTest.SetFirstRelationship 1 0.0072839
+NodeTest.SetFirstRelationshipZero 1 0.0076643
+NodeTest.SetFirstRelationshipMaxValue 1 0.0072453
+NodeTest.SetFirstProperty 1 0.007104
+NodeTest.SetFirstPropertyZero 1 0.0069877
+NodeTest.SetFirstPropertyMaxValue 1 0.0072545
+NodeTest.SetLabelValid 1 0.006909
+NodeTest.SetLabelSingleChar 1 0.0068021
+NodeTest.SetLabelMaxLength 1 0.0068095
+NodeTest.SetLabelEmptyThrows 1 0.0070179
+NodeTest.SetLabelTooLongThrows 1 0.0070413
+NodeTest.SetUseStateTrue 1 0.0069797
+NodeTest.SetUseStateFalse 1 0.0068086
+NodeTest.SerializeObjectBasic 1 0.006804
+NodeTest.SerializeObjectWithIDs 1 0.0068081
+NodeTest.SerializeObjectWithLabel 1 0.0072794
+NodeTest.SerializeObjectNotInUse 1 0.007269
+NodeTest.MultipleOperationsSequence 1 0.0076624
+NodeTest.SerializeObjectWithZeroIDs 1 0.0071551
+NodeTest.SerializeObjectWithMaxIDs 1 0.0072526
+NodeTest.ConstructorFromByteChunk 1 0.0071047
+NodeTest.SerializeDeserializeRoundTrip 1 0.006992
+NodeTest.ConstructorFromByteChunkWithNullTerminator 1 0.0066569
+PageTest.ConstructorTest 1 0.0090965
+PageTest.insertGetTestEmptyPage 1 0.0088912
+PageTest.insertGetTestPartlyFullPage 1 0.0093539
+PageTest.insertGetTestFullPage 1 0.0227675
+PageTest.deleteNodeTest 1 0.008833
+GloabalStringStorageTest.ConstructorTest 0 0
+GloabalStringStorageTest.InsertStringIntoEmptyFileTest 0 0
+GloabalStringStorageTest.StringsPastFilledChunk 0 0
+GloabalStringStorageTest.ExistingFileTest 0 0
+---
+GloabalStringStorageTest.ConstructorTest
+GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+GloabalStringStorageTest.StringsPastFilledChunk
+GloabalStringStorageTest.ExistingFileTest

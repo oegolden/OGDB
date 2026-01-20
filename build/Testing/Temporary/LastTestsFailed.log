@@ -1,0 +1,4 @@
+37:GloabalStringStorageTest.ConstructorTest
+38:GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+39:GloabalStringStorageTest.StringsPastFilledChunk
+40:GloabalStringStorageTest.ExistingFileTest

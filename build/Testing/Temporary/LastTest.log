@@ -1,0 +1,1070 @@
+Start testing: Jan 19 15:17 Pacific Standard Time
+----------------------------------------------------------
+1/40 Testing: NodeTest.ConstructorWithValidLabel
+1/40 Test: NodeTest.ConstructorWithValidLabel
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorWithValidLabel" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorWithValidLabel" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorWithValidLabel
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorWithValidLabel
+[       OK ] NodeTest.ConstructorWithValidLabel (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorWithValidLabel" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorWithValidLabel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/40 Testing: NodeTest.ConstructorWithSingleCharLabel
+2/40 Test: NodeTest.ConstructorWithSingleCharLabel
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorWithSingleCharLabel" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorWithSingleCharLabel" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorWithSingleCharLabel
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorWithSingleCharLabel
+[       OK ] NodeTest.ConstructorWithSingleCharLabel (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorWithSingleCharLabel" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorWithSingleCharLabel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/40 Testing: NodeTest.ConstructorWithMaxLengthLabel
+3/40 Test: NodeTest.ConstructorWithMaxLengthLabel
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorWithMaxLengthLabel" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorWithMaxLengthLabel" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorWithMaxLengthLabel
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorWithMaxLengthLabel
+[       OK ] NodeTest.ConstructorWithMaxLengthLabel (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorWithMaxLengthLabel" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorWithMaxLengthLabel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/40 Testing: NodeTest.ConstructorWithEmptyLabelThrows
+4/40 Test: NodeTest.ConstructorWithEmptyLabelThrows
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorWithEmptyLabelThrows" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorWithEmptyLabelThrows" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorWithEmptyLabelThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorWithEmptyLabelThrows
+[       OK ] NodeTest.ConstructorWithEmptyLabelThrows (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorWithEmptyLabelThrows" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorWithEmptyLabelThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/40 Testing: NodeTest.ConstructorWithTooLongLabelThrows
+5/40 Test: NodeTest.ConstructorWithTooLongLabelThrows
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorWithTooLongLabelThrows" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorWithTooLongLabelThrows" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorWithTooLongLabelThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorWithTooLongLabelThrows
+[       OK ] NodeTest.ConstructorWithTooLongLabelThrows (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorWithTooLongLabelThrows" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorWithTooLongLabelThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/40 Testing: NodeTest.GetLabel
+6/40 Test: NodeTest.GetLabel
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.GetLabel" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.GetLabel" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.GetLabel
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.GetLabel
+[       OK ] NodeTest.GetLabel (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.GetLabel" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.GetLabel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/40 Testing: NodeTest.GetFirstRelationshipIDInitial
+7/40 Test: NodeTest.GetFirstRelationshipIDInitial
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.GetFirstRelationshipIDInitial" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.GetFirstRelationshipIDInitial" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.GetFirstRelationshipIDInitial
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.GetFirstRelationshipIDInitial
+[       OK ] NodeTest.GetFirstRelationshipIDInitial (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.GetFirstRelationshipIDInitial" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.GetFirstRelationshipIDInitial" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/40 Testing: NodeTest.GetFirstPropertyIDInitial
+8/40 Test: NodeTest.GetFirstPropertyIDInitial
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.GetFirstPropertyIDInitial" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.GetFirstPropertyIDInitial" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.GetFirstPropertyIDInitial
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.GetFirstPropertyIDInitial
+[       OK ] NodeTest.GetFirstPropertyIDInitial (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.GetFirstPropertyIDInitial" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.GetFirstPropertyIDInitial" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/40 Testing: NodeTest.SetFirstRelationship
+9/40 Test: NodeTest.SetFirstRelationship
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstRelationship" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstRelationship" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstRelationship
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstRelationship
+[       OK ] NodeTest.SetFirstRelationship (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstRelationship" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstRelationship" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/40 Testing: NodeTest.SetFirstRelationshipZero
+10/40 Test: NodeTest.SetFirstRelationshipZero
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstRelationshipZero" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstRelationshipZero" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstRelationshipZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstRelationshipZero
+[       OK ] NodeTest.SetFirstRelationshipZero (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstRelationshipZero" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstRelationshipZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/40 Testing: NodeTest.SetFirstRelationshipMaxValue
+11/40 Test: NodeTest.SetFirstRelationshipMaxValue
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstRelationshipMaxValue" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstRelationshipMaxValue" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstRelationshipMaxValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstRelationshipMaxValue
+[       OK ] NodeTest.SetFirstRelationshipMaxValue (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstRelationshipMaxValue" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstRelationshipMaxValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/40 Testing: NodeTest.SetFirstProperty
+12/40 Test: NodeTest.SetFirstProperty
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstProperty" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstProperty" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstProperty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstProperty
+[       OK ] NodeTest.SetFirstProperty (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstProperty" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstProperty" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/40 Testing: NodeTest.SetFirstPropertyZero
+13/40 Test: NodeTest.SetFirstPropertyZero
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstPropertyZero" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstPropertyZero" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstPropertyZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstPropertyZero
+[       OK ] NodeTest.SetFirstPropertyZero (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstPropertyZero" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstPropertyZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/40 Testing: NodeTest.SetFirstPropertyMaxValue
+14/40 Test: NodeTest.SetFirstPropertyMaxValue
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetFirstPropertyMaxValue" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetFirstPropertyMaxValue" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetFirstPropertyMaxValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetFirstPropertyMaxValue
+[       OK ] NodeTest.SetFirstPropertyMaxValue (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetFirstPropertyMaxValue" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetFirstPropertyMaxValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/40 Testing: NodeTest.SetLabelValid
+15/40 Test: NodeTest.SetLabelValid
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetLabelValid" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetLabelValid" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetLabelValid
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetLabelValid
+[       OK ] NodeTest.SetLabelValid (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetLabelValid" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetLabelValid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/40 Testing: NodeTest.SetLabelSingleChar
+16/40 Test: NodeTest.SetLabelSingleChar
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetLabelSingleChar" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetLabelSingleChar" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetLabelSingleChar
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetLabelSingleChar
+[       OK ] NodeTest.SetLabelSingleChar (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetLabelSingleChar" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetLabelSingleChar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/40 Testing: NodeTest.SetLabelMaxLength
+17/40 Test: NodeTest.SetLabelMaxLength
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetLabelMaxLength" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetLabelMaxLength" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetLabelMaxLength
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetLabelMaxLength
+[       OK ] NodeTest.SetLabelMaxLength (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetLabelMaxLength" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetLabelMaxLength" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/40 Testing: NodeTest.SetLabelEmptyThrows
+18/40 Test: NodeTest.SetLabelEmptyThrows
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetLabelEmptyThrows" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetLabelEmptyThrows" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetLabelEmptyThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetLabelEmptyThrows
+[       OK ] NodeTest.SetLabelEmptyThrows (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetLabelEmptyThrows" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetLabelEmptyThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/40 Testing: NodeTest.SetLabelTooLongThrows
+19/40 Test: NodeTest.SetLabelTooLongThrows
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetLabelTooLongThrows" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetLabelTooLongThrows" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetLabelTooLongThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetLabelTooLongThrows
+[       OK ] NodeTest.SetLabelTooLongThrows (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetLabelTooLongThrows" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetLabelTooLongThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/40 Testing: NodeTest.SetUseStateTrue
+20/40 Test: NodeTest.SetUseStateTrue
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetUseStateTrue" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetUseStateTrue" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetUseStateTrue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetUseStateTrue
+[       OK ] NodeTest.SetUseStateTrue (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetUseStateTrue" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetUseStateTrue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/40 Testing: NodeTest.SetUseStateFalse
+21/40 Test: NodeTest.SetUseStateFalse
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SetUseStateFalse" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SetUseStateFalse" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SetUseStateFalse
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SetUseStateFalse
+[       OK ] NodeTest.SetUseStateFalse (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SetUseStateFalse" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SetUseStateFalse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/40 Testing: NodeTest.SerializeObjectBasic
+22/40 Test: NodeTest.SerializeObjectBasic
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectBasic" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectBasic" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectBasic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectBasic
+[       OK ] NodeTest.SerializeObjectBasic (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectBasic" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectBasic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/40 Testing: NodeTest.SerializeObjectWithIDs
+23/40 Test: NodeTest.SerializeObjectWithIDs
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectWithIDs" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectWithIDs" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectWithIDs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectWithIDs
+[       OK ] NodeTest.SerializeObjectWithIDs (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectWithIDs" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectWithIDs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/40 Testing: NodeTest.SerializeObjectWithLabel
+24/40 Test: NodeTest.SerializeObjectWithLabel
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectWithLabel" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectWithLabel" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectWithLabel
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectWithLabel
+[       OK ] NodeTest.SerializeObjectWithLabel (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectWithLabel" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectWithLabel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/40 Testing: NodeTest.SerializeObjectNotInUse
+25/40 Test: NodeTest.SerializeObjectNotInUse
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectNotInUse" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectNotInUse" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectNotInUse
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectNotInUse
+[       OK ] NodeTest.SerializeObjectNotInUse (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectNotInUse" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectNotInUse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/40 Testing: NodeTest.MultipleOperationsSequence
+26/40 Test: NodeTest.MultipleOperationsSequence
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.MultipleOperationsSequence" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.MultipleOperationsSequence" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.MultipleOperationsSequence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.MultipleOperationsSequence
+[       OK ] NodeTest.MultipleOperationsSequence (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.MultipleOperationsSequence" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.MultipleOperationsSequence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/40 Testing: NodeTest.SerializeObjectWithZeroIDs
+27/40 Test: NodeTest.SerializeObjectWithZeroIDs
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectWithZeroIDs" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectWithZeroIDs" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectWithZeroIDs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectWithZeroIDs
+[       OK ] NodeTest.SerializeObjectWithZeroIDs (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectWithZeroIDs" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectWithZeroIDs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/40 Testing: NodeTest.SerializeObjectWithMaxIDs
+28/40 Test: NodeTest.SerializeObjectWithMaxIDs
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeObjectWithMaxIDs" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeObjectWithMaxIDs" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeObjectWithMaxIDs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeObjectWithMaxIDs
+[       OK ] NodeTest.SerializeObjectWithMaxIDs (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeObjectWithMaxIDs" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeObjectWithMaxIDs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/40 Testing: NodeTest.ConstructorFromByteChunk
+29/40 Test: NodeTest.ConstructorFromByteChunk
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorFromByteChunk" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorFromByteChunk" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorFromByteChunk
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorFromByteChunk
+[       OK ] NodeTest.ConstructorFromByteChunk (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorFromByteChunk" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorFromByteChunk" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/40 Testing: NodeTest.SerializeDeserializeRoundTrip
+30/40 Test: NodeTest.SerializeDeserializeRoundTrip
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.SerializeDeserializeRoundTrip" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.SerializeDeserializeRoundTrip" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.SerializeDeserializeRoundTrip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.SerializeDeserializeRoundTrip
+[       OK ] NodeTest.SerializeDeserializeRoundTrip (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.SerializeDeserializeRoundTrip" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.SerializeDeserializeRoundTrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/40 Testing: NodeTest.ConstructorFromByteChunkWithNullTerminator
+31/40 Test: NodeTest.ConstructorFromByteChunkWithNullTerminator
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_node.exe" "--gtest_filter=NodeTest.ConstructorFromByteChunkWithNullTerminator" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"NodeTest.ConstructorFromByteChunkWithNullTerminator" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = NodeTest.ConstructorFromByteChunkWithNullTerminator
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NodeTest
+[ RUN      ] NodeTest.ConstructorFromByteChunkWithNullTerminator
+[       OK ] NodeTest.ConstructorFromByteChunkWithNullTerminator (0 ms)
+[----------] 1 test from NodeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NodeTest.ConstructorFromByteChunkWithNullTerminator" end time: Jan 19 15:17 Pacific Standard Time
+"NodeTest.ConstructorFromByteChunkWithNullTerminator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/40 Testing: PageTest.ConstructorTest
+32/40 Test: PageTest.ConstructorTest
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_page.exe" "--gtest_filter=PageTest.ConstructorTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"PageTest.ConstructorTest" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PageTest.ConstructorTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PageTest
+[ RUN      ] PageTest.ConstructorTest
+[       OK ] PageTest.ConstructorTest (2 ms)
+[----------] 1 test from PageTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PageTest.ConstructorTest" end time: Jan 19 15:17 Pacific Standard Time
+"PageTest.ConstructorTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/40 Testing: PageTest.insertGetTestEmptyPage
+33/40 Test: PageTest.insertGetTestEmptyPage
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_page.exe" "--gtest_filter=PageTest.insertGetTestEmptyPage" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"PageTest.insertGetTestEmptyPage" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PageTest.insertGetTestEmptyPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PageTest
+[ RUN      ] PageTest.insertGetTestEmptyPage
+[       OK ] PageTest.insertGetTestEmptyPage (2 ms)
+[----------] 1 test from PageTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PageTest.insertGetTestEmptyPage" end time: Jan 19 15:17 Pacific Standard Time
+"PageTest.insertGetTestEmptyPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/40 Testing: PageTest.insertGetTestPartlyFullPage
+34/40 Test: PageTest.insertGetTestPartlyFullPage
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_page.exe" "--gtest_filter=PageTest.insertGetTestPartlyFullPage" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"PageTest.insertGetTestPartlyFullPage" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PageTest.insertGetTestPartlyFullPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PageTest
+[ RUN      ] PageTest.insertGetTestPartlyFullPage
+[       OK ] PageTest.insertGetTestPartlyFullPage (2 ms)
+[----------] 1 test from PageTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PageTest.insertGetTestPartlyFullPage" end time: Jan 19 15:17 Pacific Standard Time
+"PageTest.insertGetTestPartlyFullPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/40 Testing: PageTest.insertGetTestFullPage
+35/40 Test: PageTest.insertGetTestFullPage
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_page.exe" "--gtest_filter=PageTest.insertGetTestFullPage" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"PageTest.insertGetTestFullPage" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PageTest.insertGetTestFullPage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PageTest
+[ RUN      ] PageTest.insertGetTestFullPage
+[       OK ] PageTest.insertGetTestFullPage (15 ms)
+[----------] 1 test from PageTest (15 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (15 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"PageTest.insertGetTestFullPage" end time: Jan 19 15:17 Pacific Standard Time
+"PageTest.insertGetTestFullPage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/40 Testing: PageTest.deleteNodeTest
+36/40 Test: PageTest.deleteNodeTest
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_page.exe" "--gtest_filter=PageTest.deleteNodeTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"PageTest.deleteNodeTest" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PageTest.deleteNodeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PageTest
+[ RUN      ] PageTest.deleteNodeTest
+[       OK ] PageTest.deleteNodeTest (1 ms)
+[----------] 1 test from PageTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PageTest.deleteNodeTest" end time: Jan 19 15:17 Pacific Standard Time
+"PageTest.deleteNodeTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/40 Testing: GloabalStringStorageTest.ConstructorTest
+37/40 Test: GloabalStringStorageTest.ConstructorTest
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_GSS.exe" "--gtest_filter=GloabalStringStorageTest.ConstructorTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"GloabalStringStorageTest.ConstructorTest" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = GloabalStringStorageTest.ConstructorTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GloabalStringStorageTest
+[ RUN      ] GloabalStringStorageTest.ConstructorTest
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"GloabalStringStorageTest.ConstructorTest" end time: Jan 19 15:17 Pacific Standard Time
+"GloabalStringStorageTest.ConstructorTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/40 Testing: GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+38/40 Test: GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_GSS.exe" "--gtest_filter=GloabalStringStorageTest.InsertStringIntoEmptyFileTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"GloabalStringStorageTest.InsertStringIntoEmptyFileTest" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GloabalStringStorageTest
+[ RUN      ] GloabalStringStorageTest.InsertStringIntoEmptyFileTest
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"GloabalStringStorageTest.InsertStringIntoEmptyFileTest" end time: Jan 19 15:17 Pacific Standard Time
+"GloabalStringStorageTest.InsertStringIntoEmptyFileTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/40 Testing: GloabalStringStorageTest.StringsPastFilledChunk
+39/40 Test: GloabalStringStorageTest.StringsPastFilledChunk
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_GSS.exe" "--gtest_filter=GloabalStringStorageTest.StringsPastFilledChunk" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"GloabalStringStorageTest.StringsPastFilledChunk" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = GloabalStringStorageTest.StringsPastFilledChunk
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GloabalStringStorageTest
+[ RUN      ] GloabalStringStorageTest.StringsPastFilledChunk
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Failed.
+"GloabalStringStorageTest.StringsPastFilledChunk" end time: Jan 19 15:17 Pacific Standard Time
+"GloabalStringStorageTest.StringsPastFilledChunk" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/40 Testing: GloabalStringStorageTest.ExistingFileTest
+40/40 Test: GloabalStringStorageTest.ExistingFileTest
+Command: "C:/Users/OGgol/OGDB/OGDB/build/Debug/test_GSS.exe" "--gtest_filter=GloabalStringStorageTest.ExistingFileTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/OGgol/OGDB/OGDB/build
+"GloabalStringStorageTest.ExistingFileTest" start time: Jan 19 15:17 Pacific Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\OGgol\OGDB\OGDB\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = GloabalStringStorageTest.ExistingFileTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GloabalStringStorageTest
+[ RUN      ] GloabalStringStorageTest.ExistingFileTest
+unknown file: error: C++ exception with description "resize_file: The parameter is incorrect.: "../files/gss.bin"" thrown in the test body.
+[  FAILED  ] GloabalStringStorageTest.ExistingFileTest (13 ms)
+[----------] 1 test from GloabalStringStorageTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] GloabalStringStorageTest.ExistingFileTest
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Failed.
+"GloabalStringStorageTest.ExistingFileTest" end time: Jan 19 15:17 Pacific Standard Time
+"GloabalStringStorageTest.ExistingFileTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 19 15:17 Pacific Standard Time
