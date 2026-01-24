@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/OGgol/OGDB/OGDB/build/test_property[1]_tests.cmake")
+  include("C:/Users/OGgol/OGDB/OGDB/build/test_property[1]_tests.cmake")
+else()
+  add_test(test_property_NOT_BUILT test_property_NOT_BUILT)
+endif()

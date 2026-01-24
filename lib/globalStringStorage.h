@@ -22,9 +22,9 @@ class GlobalStringStorage
 public:
     GlobalStringStorage();
     ~GlobalStringStorage();
-    std::string getString(int headerSlot);
+    std::string getString(uint32_t headerSlot);
     int putString(std::string string);
-    int deleteString(int headerSlot);
+    int deleteString(uint32_t headerSlot);
     void saveToDisk();
 private:
     struct stringEntry{
@@ -55,7 +55,7 @@ private:
     };
 
         std::multiset<stringEntry,LessLength> newlyOpenSlots;
-        void readInChunk(int headerSlot);
+        void readInChunk(uint32_t headerSlot);
     };
 
 #endif

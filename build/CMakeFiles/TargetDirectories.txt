@@ -6,6 +6,7 @@ C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/ogdb_lib.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_node.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_page.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_GSS.dir
+C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/test_property.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/run_tests.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/RUN_TESTS.dir
 C:/Users/OGgol/OGDB/OGDB/build/CMakeFiles/INSTALL.dir

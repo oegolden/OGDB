@@ -49,7 +49,7 @@ add_library(ogdb_lib ${LIB_SOURCES} ${LIB_HEADERS})
 target_include_directories(ogdb_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 # Add test executables
-set(TEST_TARGETS test_node test_page test_GSS)
+set(TEST_TARGETS test_node test_page test_GSS test_property)
 foreach(TEST_TARGET ${TEST_TARGETS})
     add_executable(${TEST_TARGET} tests/${TEST_TARGET}.cpp)
     target_link_libraries(${TEST_TARGET}

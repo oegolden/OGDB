@@ -206,6 +206,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{F1C7B66A-D6C3-396D-ACBA-D61F4233ECE3}</Project>
       <Name>test_page</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\OGgol\OGDB\OGDB\build\test_property.vcxproj">
+      <Project>{698BC255-8264-3CC1-9D57-28AAFE8C55DD}</Project>
+      <Name>test_property</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

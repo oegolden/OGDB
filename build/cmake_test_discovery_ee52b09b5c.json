@@ -1,0 +1,57 @@
+{
+  "tests": 9,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PropertyTest",
+      "tests": 9,
+      "testsuite": [
+        {
+          "name": "ConstructorValidName",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 9
+        },
+        {
+          "name": "ConstructorEmptyNameThrows",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 16
+        },
+        {
+          "name": "ConstructorNameTooLongThrows",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 20
+        },
+        {
+          "name": "ConstructorMaxLengthName",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 25
+        },
+        {
+          "name": "SetNameValid",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 31
+        },
+        {
+          "name": "SetNameEmptyThrows",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 37
+        },
+        {
+          "name": "SetNameTooLongThrows",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 42
+        },
+        {
+          "name": "NextPropIdOperations",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 48
+        },
+        {
+          "name": "PrevPropIdOperations",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_property.cpp",
+          "line": 54
+        }
+      ]
+    }
+  ]
+}

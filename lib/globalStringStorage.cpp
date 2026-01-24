@@ -32,7 +32,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
                         (static_cast<uint64_t>(charsOfSize[5]) << 16) |
                         (static_cast<uint64_t>(charsOfSize[6]) << 8) |
                         static_cast<uint64_t>(charsOfSize[7]);
-        std::cout << size;
+        //std::cout << size;
         unsigned char charsOfoffset[8];
         GSS.read(reinterpret_cast<char*>(charsOfoffset),8);
         uint64_t offset = (static_cast<uint64_t>(charsOfoffset[0]) << 56) |
@@ -43,7 +43,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
                           (static_cast<uint64_t>(charsOfoffset[5]) << 16) |
                           (static_cast<uint64_t>(charsOfoffset[6]) << 8) |
                           static_cast<uint64_t>(charsOfoffset[7]);
-        std::cout<<offset;
+        //std::cout<<offset;
         //should have hit eof marker so we need to clear
         GSS.clear();
         GSS.seekg(offset, std::ios::beg);
@@ -53,19 +53,24 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         //first 4 bytes is offset
         //next 4 bytes is length
         for(long i = 0; i < size; i+=8){
-            uint32_t offset = headerChars[i] | 
-            (headerChars[i+1] << 8) |
-            (headerChars[i+2] << 16) | 
-            (headerChars[i+3] << 24);
-            uint32_t length = headerChars[i + 4] | 
-            (headerChars[i+5] << 8) |
-            (headerChars[i+6] << 16) | 
-            (headerChars[i+7] << 24);
+            uint32_t offset = (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i])) << 24) | 
+            (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+1])) << 16) |
+            (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+2])) << 8) | 
+            static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+3]));
+            uint32_t length = (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i + 4])) << 24) | 
+            (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+5])) << 16) |
+            (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+6])) << 8) | 
+            static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+7]));
             GlobalStringStorage::stringEntry header = {offset,length};
             headerStore[i/8] = header;
         }
         //erase last 16 bytes
         std::filesystem::resize_file(f,std::filesystem::file_size(f) - 16);
+        //load the first chunk of strings
+        if(!headerStore.empty()){
+            readInChunk(0);
+        }
+       //printf(str_store.data());
     } else{
         std::ofstream GSS(f);
     }
@@ -76,7 +81,7 @@ GlobalStringStorage::~GlobalStringStorage()
     saveToDisk();
 }
 
-void GlobalStringStorage::readInChunk(int headerSlot)
+void GlobalStringStorage::readInChunk(uint32_t headerSlot)
 {
     //printf("reading in chunk");
     //TODO: change how this is done to accomodate deletes
@@ -103,10 +108,16 @@ void GlobalStringStorage::readInChunk(int headerSlot)
     GSS.close();
 }
 
-std::string GlobalStringStorage::getString(int headerSlot)
+std::string GlobalStringStorage::getString(uint32_t headerSlot)
 {
     //if current chunk contains our string then get it from the chunk
     //else load in the chunk containing that string through CHUNKSIZE
+    if(headerStore.empty()){
+        throw std::out_of_range("No strings have been written");
+    }
+    if(headerSlot > headerStore.rbegin() -> first){
+        throw std::out_of_range("No string exists at this slot");
+    }
     if (headerSlot < chunkStart || headerSlot > static_cast<int>(chunkStart + CHUNKSIZE)){
         //load in new chunk of strings
         readInChunk(headerSlot);
@@ -114,14 +125,15 @@ std::string GlobalStringStorage::getString(int headerSlot)
     //calculate start of string by taking the offset of headerStore[chunkStart] and headerSlot
     int byteOffset = headerStore[headerSlot].offset - headerStore[chunkStart].offset;
     int length = headerStore[headerSlot].length;
-    //std::cout << byteOffset << std::endl;
-    //std::cout << length << std::endl;
     std::string ret(str_store.data() + byteOffset, length);
     return ret;
 }
 
 int GlobalStringStorage::putString(std::string s)
 {
+    if(s.length() <= 0){
+        throw std::length_error("Text must be greater than 0 characters");
+    }
     // TODO: append `s` to on-disk storage and update `headerStore`
     uint32_t offset = 0;
     int last_slot = -1;
@@ -155,7 +167,7 @@ int GlobalStringStorage::putString(std::string s)
     return last_slot + 1;
 }
 
-int GlobalStringStorage::deleteString(int headerSlot){
+int GlobalStringStorage::deleteString(uint32_t headerSlot){
     newlyOpenSlots.insert(headerStore[headerSlot]);
     headerStore.erase(headerSlot);
     return headerSlot;
@@ -188,7 +200,7 @@ void GlobalStringStorage::saveToDisk(){
     }
     //write down header info: first 8 bytes is size, second 8 is offset 
     uint64_t size = headerStore.size() * 8;
-    std::cout << size << std::endl;
+    //std::cout << size << std::endl;
     std::byte headerInfoBytes[16];
     //writing size consistently across endian styles
     headerInfoBytes[0] = static_cast<std::byte>((size >> 56) & 0xFF);

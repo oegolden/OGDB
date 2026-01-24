@@ -1,35 +1,80 @@
 {
-  "tests": 5,
+  "tests": 14,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "GloabalStringStorageTest",
-      "tests": 5,
+      "tests": 14,
       "testsuite": [
         {
           "name": "ConstructorTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 26
+          "line": 32
         },
         {
           "name": "InsertStringIntoEmptyFileTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 37
+          "line": 38
         },
         {
           "name": "StringsPastFilledChunk",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 48
+          "line": 44
         },
         {
           "name": "ExistingFileTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 65
+          "line": 56
         },
         {
-          "name": "DeleteTest",
+          "name": "EmptyStringTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 77
+          "line": 68
+        },
+        {
+          "name": "LargeStringTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 73
+        },
+        {
+          "name": "SpecialCharactersTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 80
+        },
+        {
+          "name": "RetrieveNonexistentStringTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 88
+        },
+        {
+          "name": "DuplicateStringsTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 95
+        },
+        {
+          "name": "SequentialRetrievalAfterMultipleInsertsTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 103
+        },
+        {
+          "name": "FileIntegrityAfterMultipleOperationsTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 115
+        },
+        {
+          "name": "StringAtChunkBoundaryTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 141
+        },
+        {
+          "name": "MultipleInstancesIndependenceTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 150
+        },
+        {
+          "name": "DeleteStringTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
+          "line": 160
         }
       ]
     }

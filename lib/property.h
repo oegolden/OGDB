@@ -5,8 +5,9 @@
 #include <cstdint>
 #include <stdexcept>
 
+enum class PropertyType {STRING, INT};
+
 class Property {
-    enum class PropertyType {string, integer};
 public:
     static constexpr std::size_t NAMELENGTH = 64;
 

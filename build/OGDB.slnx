@@ -17,6 +17,7 @@
 		<BuildDependency Project="test_GSS.vcxproj"/>
 		<BuildDependency Project="test_node.vcxproj"/>
 		<BuildDependency Project="test_page.vcxproj"/>
+		<BuildDependency Project="test_property.vcxproj"/>
 	</Project>
 	<Project Path="Continuous.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b117a33e-1ee3-3673-9126-43084f422940">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
@@ -101,6 +102,12 @@
 		<BuildDependency Project="ogdb_lib.vcxproj"/>
 	</Project>
 	<Project Path="test_page.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="f1c7b66a-d6c3-396d-acba-d61f4233ece3">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="_deps/googletest-build/googletest/gtest.vcxproj"/>
+		<BuildDependency Project="_deps/googletest-build/googletest/gtest_main.vcxproj"/>
+		<BuildDependency Project="ogdb_lib.vcxproj"/>
+	</Project>
+	<Project Path="test_property.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="698bc255-8264-3cc1-9d57-28aafe8c55dd">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<BuildDependency Project="_deps/googletest-build/googletest/gtest.vcxproj"/>
 		<BuildDependency Project="_deps/googletest-build/googletest/gtest_main.vcxproj"/>

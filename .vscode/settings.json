@@ -1,9 +1,7 @@
 {
-    "makefile.makeDirectory": "${workspaceFolder}/build",
-    "makefile.makePath": "mingw32-make.exe",
     "testMate.cpp.test.advancedExecutables": [
         {
-            "pattern": "${workspaceFolder}/build/Release/test_*.exe",
+            "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
             "cwd": "${workspaceFolder}/build",
             "env": {}
         }
