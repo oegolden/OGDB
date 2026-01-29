@@ -18,7 +18,7 @@
 
 class GlobalStringStorage
 {
-    static constexpr int CHUNKSIZE = 64;
+    static constexpr uint8_t CHUNKSIZE = 64;
 public:
     GlobalStringStorage();
     ~GlobalStringStorage();
@@ -30,6 +30,7 @@ private:
     struct stringEntry{
         uint32_t offset; // Where it starts
         uint32_t length; // How big it is
+        uint8_t deleted;
     };
     //stores the string entries which string properties will index
     std::map<int,stringEntry>headerStore;

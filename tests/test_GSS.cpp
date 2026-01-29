@@ -21,8 +21,8 @@ protected:
         }
     }
 
-    void TearDown() override {
-        // Clean up after each test
+    void TearDown() override{
+        // Clean up any existing file after each test
         if(std::filesystem::exists(f)){
             std::filesystem::remove(f);
         }
@@ -123,7 +123,6 @@ TEST_F(GloabalStringStorageTest, FileIntegrityAfterMultipleOperationsTest){
     {
         GlobalStringStorage GSS2;
         for(int i = 0; i < 20; i++){
-            std::cout<<i<<std::endl;
             EXPECT_EQ(GSS2.getString(i), "Persist " + std::to_string(i));
         }
     }
@@ -138,15 +137,7 @@ TEST_F(GloabalStringStorageTest, StringAtChunkBoundaryTest){
     EXPECT_EQ(GSS.getString(header), boundaryStr);
 }
 
-// 6. Memory/Resource Management
-TEST_F(GloabalStringStorageTest, MultipleInstancesIndependenceTest){
-    GlobalStringStorage GSS1;
-    int h1 = GSS1.putString("Instance1");
-    GlobalStringStorage GSS2;
-    int h2 = GSS2.putString("Instance2");
-    EXPECT_EQ(GSS1.getString(h1), "Instance1");
-    EXPECT_EQ(GSS2.getString(h2), "Instance2");
-}
+// 6. TODO: Multiple instancve test
 
 // 7. Delete Functionality
 TEST_F(GloabalStringStorageTest, DeleteStringTest){

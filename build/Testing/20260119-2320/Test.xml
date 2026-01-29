@@ -25,45 +25,11 @@
 	ProcessorClockFrequency="3504"
 	>
 	<Testing>
-		<StartDateTime>Jan 24 10:28 Pacific Standard Time</StartDateTime>
-		<StartTestTime>1769279292</StartTestTime>
-		<TestList>
-			<Test>./GloabalStringStorageTest.FileIntegrityAfterMultipleOperationsTest</Test>
-		</TestList>
-		<Test Status="failed">
-			<Name>GloabalStringStorageTest.FileIntegrityAfterMultipleOperationsTest</Name>
-			<Path>.</Path>
-			<FullName>./GloabalStringStorageTest.FileIntegrityAfterMultipleOperationsTest</FullName>
-			<FullCommandLine>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_GSS.exe "--gtest_filter=GloabalStringStorageTest.FileIntegrityAfterMultipleOperationsTest" "--gtest_also_run_disabled_tests"</FullCommandLine>
-			<Results>
-				<NamedMeasurement type="text/string" name="Exit Code">
-					<Value>Failed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Exit Value">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.0251771</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_GSS.exe "--gtest_filter=GloabalStringStorageTest.FileIntegrityAfterMultipleOperationsTest" "--gtest_also_run_disabled_tests"</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value encoding="base64" compression="gzip">eJytUsFO4zAQvfsr5kilbRWzsAuVOJSlFCQWUFNOTYXSZBqsde3Inmzh77GT2kAlJJDqg/UsP7/nNzPTRimhKljnQh30YGX0Gv4MsweLxmZ3k0pLt1+cd9uyEbLMHkusbVZpXUkktNS3pnh3zNqjR49edFAU7FYTDmHSUmDmbmAlJKGBM5hInS9zmZJxv0hJm7xCzxhcConXirAygl5GK8f+20gStcS7Gk1OQivriWx+FtcCpts4HKi18XG22DaCcMDm/bgW3t2Zd/eo/guj1RqV4yL1m3qH/F7zs2+zOUwfbqFdiz2Eu3dtEM40CYAHcBjAzwCOAjgO4FcAvwM4CeA0Cr5JR20exXlU51GeR30eDXh04NGCn7KENeqf0hvlG+5GAI3RZgjp+ArwucDaB4WNoCcodImQPBdJu46Bnox/JpRD2BV+qcsX1xKAy9H1zfhiLwWGA34Ea9v7fqe3L4E05bLHvjZXhLnply7Yx6n9bFrB5GqwY+Ty34/StMuftGS7U5VO4gdI1wUsYYlSb4Z7LhxjzmarNxunM/YKT412lg==</Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<EndDateTime>Jan 24 10:28 Pacific Standard Time</EndDateTime>
-		<EndTestTime>1769279292</EndTestTime>
+		<StartDateTime>Jan 28 22:07 Pacific Standard Time</StartDateTime>
+		<StartTestTime>1769666837</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jan 28 22:07 Pacific Standard Time</EndDateTime>
+		<EndTestTime>1769666837</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

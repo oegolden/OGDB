@@ -1,10 +1,10 @@
 {
-  "tests": 14,
+  "tests": 13,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "GloabalStringStorageTest",
-      "tests": 14,
+      "tests": 13,
       "testsuite": [
         {
           "name": "ConstructorTest",
@@ -64,17 +64,12 @@
         {
           "name": "StringAtChunkBoundaryTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 141
-        },
-        {
-          "name": "MultipleInstancesIndependenceTest",
-          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 150
+          "line": 132
         },
         {
           "name": "DeleteStringTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_GSS.cpp",
-          "line": 160
+          "line": 143
         }
       ]
     }

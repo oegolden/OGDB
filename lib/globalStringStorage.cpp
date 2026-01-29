@@ -52,7 +52,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         //turn headerChars into unordered map
         //first 4 bytes is offset
         //next 4 bytes is length
-        for(long i = 0; i < size; i+=8){
+        for(long i = 0; i < size; i+=9){
             uint32_t offset = (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i])) << 24) | 
             (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+1])) << 16) |
             (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+2])) << 8) | 
@@ -61,8 +61,12 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
             (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+5])) << 16) |
             (static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+6])) << 8) | 
             static_cast<uint32_t>(static_cast<unsigned char>(headerChars[i+7]));
-            GlobalStringStorage::stringEntry header = {offset,length};
-            headerStore[i/8] = header;
+            uint8_t deleted = static_cast<uint8_t>(headerChars[i+8]);
+            GlobalStringStorage::stringEntry header = {offset,length,deleted};
+            headerStore[i/9] = header;
+            if(deleted){
+                newlyOpenSlots.insert(header);
+            }
         }
         //erase last 16 bytes
         std::filesystem::resize_file(f,std::filesystem::file_size(f) - 16);
@@ -70,7 +74,7 @@ GlobalStringStorage::GlobalStringStorage(): chunkStart(0)
         if(!headerStore.empty()){
             readInChunk(0);
         }
-       //printf(str_store.data());
+        //printf(str_store.data());
     } else{
         std::ofstream GSS(f);
     }
@@ -87,10 +91,10 @@ void GlobalStringStorage::readInChunk(uint32_t headerSlot)
     //TODO: change how this is done to accomodate deletes
     //store chunk starting offset in order to tell if the code we currently have is 64 offsets out
     int initialOffset = headerStore[headerSlot].offset;
-    int lastSlot = headerStore.rbegin()->first;
+    uint32_t lastSlot = headerStore.rbegin()->first;
     int ending = 0;
     //if current chunk we'retrying to get isn't full
-    if( headerSlot - lastSlot < CHUNKSIZE){
+    if( headerSlot + CHUNKSIZE > lastSlot){
         ending = headerStore[lastSlot].offset + headerStore[lastSlot].length;
     } else{
         ending = headerStore[headerSlot + CHUNKSIZE].offset + headerStore[headerSlot + CHUNKSIZE].length;
@@ -115,7 +119,7 @@ std::string GlobalStringStorage::getString(uint32_t headerSlot)
     if(headerStore.empty()){
         throw std::out_of_range("No strings have been written");
     }
-    if(headerSlot > headerStore.rbegin() -> first){
+    if(headerStore[headerSlot].deleted){
         throw std::out_of_range("No string exists at this slot");
     }
     if (headerSlot < chunkStart || headerSlot > static_cast<int>(chunkStart + CHUNKSIZE)){
@@ -146,13 +150,21 @@ int GlobalStringStorage::putString(std::string s)
     //initiate ofstream and get the entry
     std::ofstream GSS;
     GSS.open("../files/gss.bin", std::ios::ate | std::ios::binary | std::ios::in | std::ios::out);
-    stringEntry entry = {offset, static_cast<uint32_t>(s.size())};
+    stringEntry entry = {offset, static_cast<uint32_t>(s.size()), 0};
     //find the lower bound in the deleted entries that we can put our string in
     if(!newlyOpenSlots.empty()){
         auto lowerBound = newlyOpenSlots.lower_bound(entry);
         if(lowerBound != newlyOpenSlots.end()){
             entry.offset = lowerBound->offset;
             GSS.seekp(lowerBound->offset);
+            //unmark the deleted flag on the reused entry
+            for(auto& hEntry : headerStore){
+                if(hEntry.second.offset == lowerBound->offset){
+                    hEntry.second.deleted = 0;
+                    break;
+                }
+            }
+            newlyOpenSlots.erase(lowerBound);
         } 
     } else{
         headerStore[last_slot + 1] = entry;
@@ -168,8 +180,8 @@ int GlobalStringStorage::putString(std::string s)
 }
 
 int GlobalStringStorage::deleteString(uint32_t headerSlot){
+    headerStore[headerSlot].deleted = 1;
     newlyOpenSlots.insert(headerStore[headerSlot]);
-    headerStore.erase(headerSlot);
     return headerSlot;
 }
 
@@ -183,7 +195,7 @@ void GlobalStringStorage::saveToDisk(){
     }
     for(auto& entry: headerStore){
         //cast as byte to ensure masking works the same and that no other opps work
-        std::byte headerByteArray[8];
+        std::byte headerByteArray[9];
         //writing offset to bytes to write to file
         headerByteArray[0] = static_cast<std::byte>((entry.second.offset >> 24) & 0xFF);
         headerByteArray[1] = static_cast<std::byte>((entry.second.offset >> 16) & 0xFF);
@@ -194,12 +206,14 @@ void GlobalStringStorage::saveToDisk(){
         headerByteArray[5] = static_cast<std::byte>((entry.second.length >> 16) & 0xFF);
         headerByteArray[6] = static_cast<std::byte>((entry.second.length >> 8) & 0xFF);
         headerByteArray[7] = static_cast<std::byte>(entry.second.length & 0xFF);
+        //writing deleted flag
+        headerByteArray[8] = static_cast<std::byte>(entry.second.deleted);
         //write header to file
-        GSS.write(reinterpret_cast<const char*>(headerByteArray),8);
+        GSS.write(reinterpret_cast<const char*>(headerByteArray),9);
 
     }
     //write down header info: first 8 bytes is size, second 8 is offset 
-    uint64_t size = headerStore.size() * 8;
+    uint64_t size = headerStore.size() * 9;
     //std::cout << size << std::endl;
     std::byte headerInfoBytes[16];
     //writing size consistently across endian styles
