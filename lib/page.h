@@ -35,6 +35,7 @@ class Page{
         void deleteObject(uint16_t objectId);
         /// @brief get's the pageId
         /// @return pageId
+        char[] serializePage() const;
         uint16_t getPageId() const {return pageId;}
         uint16_t getFirstOpenSlot() const;
         uint16_t getOpenSlots() const;
@@ -96,5 +97,23 @@ uint16_t Page<T>::getOpenSlots() const{
 }
 
 template <typename T>
+char[] Page<T>::serializePage() const{
+    std::vector<uint16_t> serializedFreeSlots();
+    while(!freeSlots.empty()){
+        serializedFreeSlots.append(freeSlots.front());
+        freeSlots.pop();
+    }
+    // serialize free slot vector to raw bytes
+    size_t freeBytes = serializedFreeSlots.size() * sizeof(uint16_t);
+    size_t totalSize = PAGESIZE + freeBytes;
+    char* combined = new char[totalSize];
+    // copy page item_store bytes
+    std::memcpy(combined, reinterpret_cast<const char*>(item_store.get()), PAGESIZE);
+    // copy serialized free slots bytes (if any)
+    if (!serializedFreeSlots.empty()) {
+        std::memcpy(combined + PAGESIZE, reinterpret_cast<const char*>(serializedFreeSlots.data()), freeBytes);
+    }
+    return combined;
+}
 Page<T>::~Page() = default;
 #endif
