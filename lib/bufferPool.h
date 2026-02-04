@@ -90,11 +90,11 @@ class BufferPool{
     public:
         BufferPool();
         ~BufferPool();
-        T getObject(uint32_t objId) const;
-        void deleteObject(uint32_t objId);
+        T getObject(uint32_t pageId, uint32_t objId) const;
+        void deleteObject(uint32_t pageId, uint32_t objId);
         //gonna have many different ways to do this, 
         //feel like it would be better to deserealize the object then update it and researlize
-        void updateObject(uint32_t objId, T replacementObject);
+        void updateObject(uint32_t pageId, uint32_t objId, T replacementObject);
         uint32_t insertObject(T object);
     private:
         LRUCache<T> buffer;
@@ -131,16 +131,18 @@ template <typename T>
 BufferPool<T>::~BufferPool() {}
 
 template <typename T>
-T BufferPool<T>::getObject(uint32_t objId) const {
+T BufferPool<T>::getObject(uint32_t pageId, uint32_t objId) const {
+    //TODO: use the pageId to search for key then use objId/pageID to get the right offset 
+    //If page doesn't exist then return something that lets heap file know
     return T{};
 }
 
 template <typename T>
-void BufferPool<T>::deleteObject(uint32_t objId) {
+void BufferPool<T>::deleteObject(uint32_t pageId, uint32_t objId) {
 }
 
 template <typename T>
-void BufferPool<T>::updateObject(uint32_t objId, T replacementObject) {
+void BufferPool<T>::updateObject(uint32_t pageId, uint32_t objId, T replacementObject) {
 }
 
 template <typename T>
