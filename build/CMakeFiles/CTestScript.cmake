@@ -2,7 +2,7 @@
 # If you choose not to use CMake, this file may be hand configured, by
 # filling in the required variables.
 
-cmake_minimum_required(VERSION 4.2.1)
+cmake_minimum_required(VERSION 4.2.3)
 
 # CTest Start Step
 set(CTEST_SOURCE_DIRECTORY "C:/Users/OGgol/OGDB/OGDB")
@@ -61,7 +61,7 @@ set(CTEST_MEMORYCHECK_SANITIZER_OPTIONS "")
 set(CTEST_MEMORYCHECK_SUPPRESSIONS_FILE "")
 
 # CTest Submit Step
-set(CTEST_SITE "DESKTOP-M7SFJOK")
+set(CTEST_SITE "LAPTOP-JFTJHO3P")
 set(CTEST_BUILD_NAME "Win32-MSBuild")
 set(CTEST_SUBMIT_URL "http://")
 set(CTEST_SUBMIT_INACTIVITY_TIMEOUT "")

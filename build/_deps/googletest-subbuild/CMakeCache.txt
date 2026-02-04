@@ -21,10 +21,10 @@ CMAKE_CONFIGURATION_TYPES:STRING=Debug
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/OGgol/OGDB/OGDB/build/_deps/googletest-subbuild/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/googletest-populate
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/googletest-populate
 
 //No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -75,7 +75,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cmake.exe
 //Path to cpack program executable.
@@ -87,9 +87,9 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Visual Studio 18 2026
 //No help, variable specified on the command line.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/18/Community
 //Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
+CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this

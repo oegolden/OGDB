@@ -1,5 +1,5 @@
-libdir=C:/Program Files (x86)/OGDB/lib
-includedir=C:/Program Files (x86)/OGDB/include
+libdir=C:/Program Files/OGDB/lib
+includedir=C:/Program Files/OGDB/include
 
 Name: gmock_main
 Description: GoogleMock (with main() function)

@@ -11,7 +11,7 @@ BuildDirectory: C:/Users/OGgol/OGDB/OGDB/build
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: DESKTOP-M7SFJOK
+Site: LAPTOP-JFTJHO3P
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Win32-MSBuild
@@ -63,8 +63,8 @@ UpdateOptions:
 UpdateType: git
 
 # Compiler info
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe
-CompilerVersion: 19.50.35722.0
+Compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe
+CompilerVersion: 19.50.35723.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 

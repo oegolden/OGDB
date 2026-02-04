@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-MSBuild"
+	BuildStamp="20260203-0351-Experimental"
+	Name="LAPTOP-JFTJHO3P"
+	Generator="ctest-4.2.3"
+	CompilerName="C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe"
+	CompilerVersion="19.50.35723.0"
+	OSName="Windows"
+	Hostname="LAPTOP-JFTJHO3P"
+	OSRelease="10.0.26200"
+	OSVersion="Windows 10"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="10"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="14"
+	TotalVirtualMemory="33899"
+	TotalPhysicalMemory="16077"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2600"
+	>
+	<Testing>
+		<StartDateTime>Feb 02 20:08 Pacific Standard Time</StartDateTime>
+		<StartTestTime>1770091708</StartTestTime>
+		<TestList>
+			<Test>./PageTest.SerializeDeserializeTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>PageTest.SerializeDeserializeTest</Name>
+			<Path>.</Path>
+			<FullName>./PageTest.SerializeDeserializeTest</FullName>
+			<FullCommandLine>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_page.exe "--gtest_filter=PageTest.SerializeDeserializeTest" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0269243</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\OGgol\OGDB\OGDB\build\Debug\test_page.exe "--gtest_filter=PageTest.SerializeDeserializeTest" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkMFqwzAMhu9+Ch2bQwy9rYUetqXkMGhLsp7iUNxENQbHLrbTwZ5+dtKWrjAWHYRkffz+paLXWmoBHZd6lsDJmg7el2zv0Dq2zYVRIWdvYzr2UrXs0OLZMWGMUOjR+dTZ5qFlQxurQxSlTUM2xuMS8gGBzzCBk1QeLaxgxwXGF1qilVzJb8zQ3co4INXqHjUUV7tz8INMtHutXS89UlKl96ghV+bI1ThHfZHW6A51YNGn/fkJftS82SIVFPsNDFFPMTuisP2YgsNs/gKdS/73EchFIMEbz1VCpm3pkdu0NV/69w3/uh1YrunTR2Gf3WtZrrO4/ghT8gMnhrfd====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Feb 02 20:08 Pacific Standard Time</EndDateTime>
+		<EndTestTime>1770091708</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

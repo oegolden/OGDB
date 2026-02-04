@@ -1,10 +1,10 @@
 {
-  "tests": 5,
+  "tests": 6,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "PageTest",
-      "tests": 5,
+      "tests": 6,
       "testsuite": [
         {
           "name": "ConstructorTest",
@@ -14,22 +14,27 @@
         {
           "name": "insertGetTestEmptyPage",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
-          "line": 26
+          "line": 25
         },
         {
           "name": "insertGetTestPartlyFullPage",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
-          "line": 35
+          "line": 34
         },
         {
           "name": "insertGetTestFullPage",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
-          "line": 45
+          "line": 44
         },
         {
           "name": "deleteNodeTest",
           "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
-          "line": 56
+          "line": 55
+        },
+        {
+          "name": "SerializeDeserializeTest",
+          "file": "C:\\Users\\OGgol\\OGDB\\OGDB\\tests\\test_page.cpp",
+          "line": 66
         }
       ]
     }

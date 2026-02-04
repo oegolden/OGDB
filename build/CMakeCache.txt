@@ -21,7 +21,7 @@ BUILD_GMOCK:BOOL=ON
 BUILD_TESTING:BOOL=ON
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
@@ -122,7 +122,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/OGDB
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/OGDB
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -137,7 +137,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -160,7 +160,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Path to a program.
-CMAKE_MT:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.exe
+CMAKE_MT:FILEPATH=CMAKE_MT-NOTFOUND
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -193,7 +193,7 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //RC compiler
-CMAKE_RC_COMPILER:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.exe
+CMAKE_RC_COMPILER:FILEPATH=rc
 
 //Flags for Windows Resource Compiler during all build types.
 CMAKE_RC_FLAGS:STRING=-DWIN32
@@ -328,7 +328,7 @@ OGDB_IS_TOP_LEVEL:STATIC=ON
 OGDB_SOURCE_DIR:STATIC=C:/Users/OGgol/OGDB/OGDB
 
 //Name of the computer/site where compile is being run
-SITE:STRING=DESKTOP-M7SFJOK
+SITE:STRING=LAPTOP-JFTJHO3P
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=C:/Users/OGgol/OGDB/OGDB/build/_deps/googletest-build/googlemock
@@ -393,7 +393,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cmake.exe
 //Path to cpack program executable.
@@ -443,9 +443,9 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Visual Studio 18 2026
 //Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools
+CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/18/Community
 //Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
+CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Test CMAKE_HAVE_LIBC_PTHREAD
@@ -563,7 +563,7 @@ CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/OGgol/AppData/Local/Programs/Python/Python313/python.exe][found components: Interpreter ][v3.13.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/OGgol/AppData/Local/Programs/Python/Python312/python.exe][found components: Interpreter ][v3.12.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GITCOMMAND
@@ -579,18 +579,18 @@ MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/OGDB
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files/OGDB
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python_EXECUTABLE:INTERNAL=C:/Users/OGgol/AppData/Local/Programs/Python/Python313/python.exe
+_Python_EXECUTABLE:INTERNAL=C:/Users/OGgol/AppData/Local/Programs/Python/Python312/python.exe
 //Path to a program.
 _Python_EXECUTABLE_DEBUG:INTERNAL=_Python_EXECUTABLE_DEBUG-NOTFOUND
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;3;64;32;<none>;cp313-win_amd64;;C:\Users\OGgol\AppData\Local\Programs\Python\Python313\Lib;C:\Users\OGgol\AppData\Local\Programs\Python\Python313\Lib;C:\Users\OGgol\AppData\Local\Programs\Python\Python313\Lib\site-packages;C:\Users\OGgol\AppData\Local\Programs\Python\Python313\Lib\site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=ec2747db2ff359dad7e1e0c4901819b8
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;1;64;32;<none>;cp312-win_amd64;;C:\Users\OGgol\AppData\Local\Programs\Python\Python312\Lib;C:\Users\OGgol\AppData\Local\Programs\Python\Python312\Lib;C:\Users\OGgol\AppData\Local\Programs\Python\Python312\Lib\site-packages;C:\Users\OGgol\AppData\Local\Programs\Python\Python312\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=c31377a2975418d47ca255c6909348c9
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
 cmake_package_name:INTERNAL=GTest

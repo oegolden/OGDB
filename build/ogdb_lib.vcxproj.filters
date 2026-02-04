@@ -10,9 +10,6 @@
     <ClCompile Include="C:\Users\OGgol\OGDB\OGDB\lib\relationship.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\OGgol\OGDB\OGDB\lib\bufferPool.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\OGgol\OGDB\OGDB\lib\globalStringStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

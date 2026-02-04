@@ -28,7 +28,6 @@ set(LIB_SOURCES
     lib/node.cpp
     lib/property.cpp
     lib/relationship.cpp
-    lib/bufferPool.cpp
     lib/globalStringStorage.cpp
 )
 
