@@ -1,0 +1,48 @@
+### OGDB: Lightweight Graph Database Core
+
+OGDB is a C++20 graph database engine focused on low-level storage management. It implements a custom disk-based storage system using fixed-size pages, a buffer pool manager, and structured data models for nodes, relationships, and properties.
+
+#### Project Architecture
+
+* **Storage Layer**: Uses a page-based system with a default size of 1MB (`1048576` bytes) per page. It manages object serialization and free-slot tracking via an internal queue.
+* **Memory Management**: Implements a `BufferPool` with an LRU (Least Recently Used) cache strategy to minimize disk I/O and manage thread-safe page access.
+* **Data Models**:
+* **Nodes**: Fixed-size labels (64 bytes) with pointers to relationship and property chains.
+* **Relationships**: Doubly-linked structures connecting two nodes, supporting relationship types and property chains.
+* **Properties**: Key-value pairs supporting `STRING` and `INT` types.
+* **Global String Storage**: A specialized storage manager for handling variable-length string data through a chunk-based system.
+
+
+
+#### Current Implementation Status
+
+* **Build System**: Configured with CMake 3.14+ and C++20.
+* **Testing**: Integrated with Google Test (via `FetchContent`) and CTest.
+* **Serialization**: Basic object-to-byte serialization is implemented for core types like Nodes.
+
+---
+
+### Future Goals & Project Timeline
+
+#### Phase 1: Core Stability (Q1 2026)
+
+* **Complete BufferPool Implementation**: Finalize the `insertObject`, `updateObject`, and `deleteObject` logic within `bufferPool.h`, which currently contain placeholders.
+* **Disk Persistence**: Implement the `writePage` and `readPage` methods in `file.h` to allow data to persist across sessions using `std::fstream`.
+* **Property Values**: Expand the `Property` class to store actual values, as current definitions focus on metadata and IDs.
+
+#### Phase 2: Indexing & Querying (Q2 2026)
+
+* **Indexing**: Implement B-Tree or Hash indexing for Node labels to allow efficient lookups instead of full file scans.
+* **Traversal API**: Create a service layer to traverse relationship chains utilizing the `firstNextRelId` and `secondNextRelId` pointers.
+* **Pointer Swiveling**: Implement the planned "pointer swivel" optimization in the `Node` class to convert disk IDs to memory pointers for faster navigation.
+
+#### Phase 3: Advanced Features (Q3 2026)
+
+* **Transaction Management**: Introduce ACID compliance with a Write-Ahead Log (WAL).
+* **Variable-Length Optimization**: Refine `GlobalStringStorage` to reclaim space from the `newlyOpenSlots` multiset more efficiently.
+* **Concurrency**: Expand `std::mutex` usage to a more granular locking system across the entire `BufferPool`.
+
+#### Phase 4: Interface & Tooling (Q4 2026)
+
+* **CLI Client**: Develop a command-line interface for manual data entry and visualization.
+* **Query Language**: Implement a basic subset of a graph query language (such as Cypher) to allow declarative data retrieval.
