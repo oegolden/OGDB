@@ -27,7 +27,7 @@ TEST_F(PageTest, insertGetTestEmptyPage){
     Node node = Node("TestNode");
     page.insertObject(node);
     EXPECT_EQ(page.getFirstOpenSlot(), 1);
-    EXPECT_EQ(page.getPageObject(0).getLabel(),"TestNode");
+    EXPECT_EQ(page.getObject(0).getLabel(),"TestNode");
 }
 
 
@@ -37,7 +37,7 @@ TEST_F(PageTest, insertGetTestPartlyFullPage){
        Node node = Node(std::to_string(i));
        page.insertObject(node); 
        EXPECT_EQ(page.getFirstOpenSlot(), i+1);
-       EXPECT_EQ(page.getPageObject(i).getLabel(),std::to_string(i));
+       EXPECT_EQ(page.getObject(i).getLabel(),std::to_string(i));
     }
 }
 
@@ -52,12 +52,12 @@ TEST_F(PageTest, insertGetTestFullPage){
     EXPECT_THROW(page.insertObject(finalNode),std::logic_error);
 }
 
-TEST_F(PageTest, deleteNodeTest){
+TEST_F(PageTest, removeNodeTest){
     Page<Node> page;
     Node node = Node("test");
     page.insertObject(node);
-    page.deleteObject(0);
-    Node deletedNode = page.getPageObject(0);
+    page.removeObject(0);
+    Node deletedNode = page.getObject(0);
     Node notdeletedNode = Node("testr");
     EXPECT_EQ(deletedNode.getUseState(), false);
     EXPECT_EQ(notdeletedNode.getUseState(), true);
@@ -75,8 +75,8 @@ TEST_F(PageTest, SerializeDeserializeTest){
     Page<Node> page2(buf.get());
 
     // verify objects preserved
-    EXPECT_EQ(page2.getPageObject(0).getLabel(), "Alice");
-    EXPECT_EQ(page2.getPageObject(1).getLabel(), "Bob");
+    EXPECT_EQ(page2.getObject(0).getLabel(), "Alice");
+    EXPECT_EQ(page2.getObject(1).getLabel(), "Bob");
 
     // verify open slots count matches original
     EXPECT_EQ(page2.getOpenSlots(), page.getOpenSlots());

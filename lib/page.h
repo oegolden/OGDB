@@ -14,6 +14,8 @@
 #include <iterator> 
 #include <cstdint>
 #include <iostream>
+#include <iterator> // For std::forward_iterator_tag
+#include <cstddef>  // For std::ptrdiff_t
 using namespace std;
 
 
@@ -25,7 +27,11 @@ and only use the serialized array when we're trying to serialize and save the pa
 template <typename T>
 class Page{
     public:
-        static constexpr int PAGESIZE = 1048576;
+        static constexpr int PAGESIZE = 4000;
+        static constexpr uint16_t objSize = T::SERIALIZED_SIZE;
+        static constexpr size_t MAX_SLOTS = static_cast<size_t>(PAGESIZE) / static_cast<size_t>(objSize);
+        static constexpr size_t HEADER_BITS = MAX_SLOTS;
+        static constexpr size_t HEADER_BYTES = (HEADER_BITS + 7) / 8;
         Page();
         Page(uint16_t pageId);
         Page(const char* serializedPage);
@@ -37,7 +43,7 @@ class Page{
         /// @brief get's the object unserialized from the byte chunk representing the object
         /// @param objectId the Id of the object i.e. its place in the file
         /// @return the object stored on the page
-        T getPageObject(uint16_t objectId) const;
+        T getObject(uint16_t objectId) const;
         /// @brief Delete's the byte chunk that represents the object on that page
         /// @param objectId the Id of the object i.e. its place in the file
         void removeObject(uint16_t objectId);
@@ -50,7 +56,26 @@ class Page{
         uint16_t getPageId() const {return pageId;}
         uint16_t getFirstOpenSlot() const;
         uint16_t getOpenSlots() const;
-        static constexpr uint16_t objSize = T::SERIALIZED_SIZE;
+        
+
+        using iterator = std::vector<std::optional<T>>::iterator;
+        using const_iterator = std::vector<T>::const_iterator;
+
+        iterator begin() {
+        return data.begin();
+    }
+
+    iterator end() {
+        return data.end();
+    }
+
+    const_iterator begin() const {
+        return data.begin();
+    }
+
+    const_iterator end() const {
+        return data.end();
+    }
     private:
         uint16_t pageId;
         // store objects directly; empty optional means free slot
@@ -63,7 +88,7 @@ Page<T>::Page() : Page(static_cast<uint16_t>(0)) {}
 
 template <typename T>
 Page<T>::Page(uint16_t pid) : pageId(pid) {
-    size_t maxSlots = PAGESIZE / objSize;
+    size_t maxSlots = MAX_SLOTS;
     item_store.resize(maxSlots);
     for (uint16_t i = 0; i < maxSlots; ++i) {
         freeSlots.push(i);
@@ -73,27 +98,30 @@ Page<T>::Page(uint16_t pid) : pageId(pid) {
 template <typename T>
 Page<T>::Page(const char* serializedPage){
     // Deserialize format:
-    // [uint16_t freeCount][freeCount * uint16_t freeSlotEntries][PAGESIZE bytes of item_store]
+    // [headerBytes bytes: bitset with 1=used,0=free][PAGESIZE bytes of item_store]
     if (!serializedPage) {
         throw std::invalid_argument("serializedPage is null");
     }
     size_t pos = 0;
-    uint16_t freeCount = 0;
-    std::memcpy(&freeCount, serializedPage + pos, sizeof(uint16_t));
-    pos += sizeof(uint16_t);
 
-    size_t maxSlots = PAGESIZE / objSize;
+    size_t maxSlots = MAX_SLOTS;
+    size_t headerBytes = HEADER_BYTES;
+
+    // Read header bitset
+    std::vector<uint8_t> header(headerBytes);
+    std::memcpy(header.data(), serializedPage + pos, headerBytes);
+    pos += headerBytes;
+
+    //update freeSlots with the slots that are able to be filled
     std::vector<bool> isFree(maxSlots, false);
-
-    // Read free slot indices
-    for (uint16_t i = 0; i < freeCount; ++i) {
-        uint16_t slot = 0;
-        std::memcpy(&slot, serializedPage + pos, sizeof(uint16_t));
-        pos += sizeof(uint16_t);
-        if (slot < maxSlots) {
-            isFree[slot] = true;
-            freeSlots.push(slot);
-        }
+    for (size_t i = 0; i < maxSlots; ++i) {
+        size_t byteIndex = i / 8;
+        size_t bitIndex = i % 8;
+        bool used = (header[byteIndex] >> bitIndex) & 0x1;
+        if (!used) {
+            isFree[i] = true;
+            freeSlots.push(static_cast<uint16_t>(i));
+        }   
     }
 
     // Prepare item store and reconstruct objects
@@ -105,7 +133,7 @@ Page<T>::Page(const char* serializedPage){
         if (!isFree[i]) {
             item_store[i] = T(chunk);
         } else {
-            item_store[i] = std::nullopt;
+            item_store[i] = {std::nullopt};
         }
     }
 }
@@ -122,8 +150,8 @@ uint32_t Page<T>::insertObject(T& object) {
 }
 
 template <typename T>
-T Page<T>::getPageObject(uint16_t objectId) const {
-    size_t maxSlots = PAGESIZE / objSize;
+T Page<T>::getObject(uint16_t objectId) const {
+    size_t maxSlots = MAX_SLOTS;
     if (objectId >= maxSlots) {
         throw std::out_of_range("Id out of page range");
     }
@@ -136,24 +164,17 @@ T Page<T>::getPageObject(uint16_t objectId) const {
 
 template <typename T>
 void Page<T>::deleteObject(uint16_t objectId){
-    size_t maxSlots = PAGESIZE / objSize;
+    size_t maxSlots = MAX_SLOTS;
     if (objectId >= maxSlots) return;
     if (item_store[objectId].has_value()) {
         item_store[objectId]->setUseState(false);
-    }
-}
-template <typename T>
-void Page<T>::removeObject(uint16_t objectId){
-    size_t maxSlots = PAGESIZE / objSize;
-    if (objectId >= maxSlots) return;
-    if (item_store[objectId].has_value()) {
-        item_store[objectId].reset();
         freeSlots.push(objectId);
     }
 }
+
 template <typename T>
 uint16_t Page<T>::getFirstOpenSlot() const{
-    if (freeSlots.empty()) return static_cast<uint16_t>(PAGESIZE / objSize);
+    if (freeSlots.empty()) return static_cast<uint16_t>(MAX_SLOTS);
     return freeSlots.front();
 }
 
@@ -164,34 +185,31 @@ uint16_t Page<T>::getOpenSlots() const{
 
 template <typename T>
 std::unique_ptr<char[]> Page<T>::serializePage() const {
-    std::queue<uint16_t> q = freeSlots;
-    //keep track of how many free slots we have to view
-    uint16_t freeCount = static_cast<uint16_t>(q.size());
-    //header that stores the free slots of the page
-    size_t headerSize = sizeof(uint16_t) + static_cast<size_t>(freeCount) * sizeof(uint16_t);
-    size_t totalSize = headerSize + PAGESIZE;
+    size_t maxSlots = MAX_SLOTS;
+    size_t headerBytes = HEADER_BYTES;
 
+    size_t totalSize = headerBytes + PAGESIZE;
     std::unique_ptr<char[]> combined(new char[totalSize]);
     size_t pos = 0;
 
-    // Write freeCount
-    std::memcpy(combined.get() + pos, &freeCount, sizeof(uint16_t));
-    pos += sizeof(uint16_t);
-
-    // Write free slot entries
-    while (!q.empty()) {
-        uint16_t item = q.front();
-        std::memcpy(combined.get() + pos, &item, sizeof(uint16_t));
-        pos += sizeof(uint16_t);
-        q.pop();
+    // Build header bitset: 1 = used, 0 = free
+    std::vector<uint8_t> header(headerBytes, 0);
+    for (size_t i = 0; i < maxSlots; ++i) {
+        if (item_store[i].has_value()) {
+            size_t byteIndex = i / 8;
+            size_t bitIndex = i % 8;
+            header[byteIndex] |= static_cast<uint8_t>(1u << bitIndex);
+        }
     }
 
+    // Write header
+    std::memcpy(combined.get() + pos, header.data(), headerBytes);
+    pos += headerBytes;
+
     // Write item_store bytes (slot-wise)
-    size_t maxSlots = PAGESIZE / objSize;
-    
     for (size_t i = 0; i < maxSlots; ++i) {
         char* dest = combined.get() + pos + static_cast<size_t>(i) * objSize;
-        if (item_store[i].has_value()) {
+        if (item_store[i]) {
             auto arr = item_store[i]->serializeObject();
             std::memcpy(dest, arr.data(), objSize);
         } else {
@@ -205,5 +223,6 @@ std::unique_ptr<char[]> Page<T>::serializePage() const {
 
 template <typename T>
 Page<T>::~Page() {}
+
 
 #endif

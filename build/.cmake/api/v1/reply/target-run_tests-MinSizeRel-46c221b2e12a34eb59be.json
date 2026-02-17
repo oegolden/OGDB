@@ -31,9 +31,6 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 1,
 			"id" : "test_node::@6890427a1f51a3e7e1df"
 		},
@@ -43,6 +40,9 @@
 		},
 		{
 			"id" : "test_GSS::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "run_tests::@6890427a1f51a3e7e1df",
